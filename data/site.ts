@@ -41,9 +41,19 @@ export type ResearchItem = {
   tags: string[];
   date: string;
   category: string;
+  href?: string;
 };
 
 export const research: ResearchItem[] = [
+  {
+    title: "Where Is Alpha Truly Generated?",
+    summary:
+      "Completed research report on behavioural alpha, examining how investor biases, alternative data, AI/ML signals, sentiment, attention, and narrative shifts can be formalised into systematic factors beyond traditional value, size, momentum, low-volatility, and quality models.",
+    tags: ["Behavioural alpha", "Factor investing", "Alternative data", "AI/ML"],
+    date: "2026",
+    category: "Research Report",
+    href: "/reports/alpha-generation.pdf",
+  },
   {
     title: "Dell Technologies Equity Research Thesis",
     summary:

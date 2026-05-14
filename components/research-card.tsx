@@ -26,10 +26,22 @@ export function ResearchCard({ item }: ResearchCardProps) {
           </span>
         ))}
       </div>
-      <button className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#183b2b] transition group-hover:text-[#111713]">
-        Read more
-        <ArrowRight size={15} className="transition group-hover:translate-x-1" />
-      </button>
+      {item.href ? (
+        <a
+          href={item.href}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#183b2b] transition group-hover:text-[#111713]"
+        >
+          View report
+          <ArrowRight size={15} className="transition group-hover:translate-x-1" />
+        </a>
+      ) : (
+        <button className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[#183b2b] transition group-hover:text-[#111713]">
+          Read more
+          <ArrowRight size={15} className="transition group-hover:translate-x-1" />
+        </button>
+      )}
     </article>
   );
 }
