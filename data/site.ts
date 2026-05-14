@@ -46,6 +46,15 @@ export type ResearchItem = {
 
 export const research: ResearchItem[] = [
   {
+    title: "Dynamic Factor Timing with an Options Risk Overlay",
+    summary:
+      "Condensed QF206 research project using ElasticNet to time momentum, reversal, low-volatility, and behavioural overreaction factors, with a SPY put option overlay for tail-risk protection and interactive backtest visuals.",
+    tags: ["ElasticNet", "Factor timing", "Options overlay", "Backtesting"],
+    date: "2026",
+    category: "Quantitative Research",
+    href: "/research/qf206-factor-timing",
+  },
+  {
     title: "Where Is Alpha Truly Generated?",
     summary:
       "Completed research report on behavioural alpha, examining how investor biases, alternative data, AI/ML signals, sentiment, attention, and narrative shifts can be formalised into systematic factors beyond traditional value, size, momentum, low-volatility, and quality models.",
@@ -74,6 +83,15 @@ export type ProjectItem = {
 };
 
 export const projects: ProjectItem[] = [
+  {
+    title: "QF206 Dynamic Factor Timing Strategy",
+    description:
+      "Machine-learning factor allocation project using ElasticNet, Ridge, and XGBoost comparisons, SPY regime features, transaction-cost-aware backtesting, and an options-derived risk overlay.",
+    stack: ["Python", "ElasticNet", "XGBoost", "Options data"],
+    githubUrl: "https://github.com/christiiscool/qf206",
+    demoUrl: "/research/qf206-factor-timing",
+    metric: "8.55% annualised net return",
+  },
   {
     title: "Fund Performance Monitoring Dashboard",
     description:
