@@ -52,7 +52,7 @@ export const research: ResearchItem[] = [
     tags: ["Behavioural alpha", "Factor investing", "Alternative data", "AI/ML"],
     date: "2026",
     category: "Research Report",
-    href: "/reports/alpha-generation.pdf",
+    href: "/research/alpha-generation",
   },
   {
     title: "Dell Technologies Equity Research Thesis",
