@@ -1,8 +1,10 @@
 :root {
-  --background: #050505;
-  --foreground: #f5f5f4;
-  --muted: #a1a1aa;
-  --panel: #0d0d0f;
-  --line: rgba(255, 255, 255, 0.1);
-  --accent: #d6d3d1;
+  --background: #f7f3e8;
+  --foreground: #111713;
+  --muted: #667064;
+  --panel: #fffaf0;
+  --line: rgba(17, 23, 19, 0.12);
+  --accent: #c8ff5a;
+  --sage: #d8e4c9;
+  --forest: #183b2b;
 }

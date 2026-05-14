@@ -12,13 +12,13 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/75 backdrop-blur-xl">
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-[#111713]/10 bg-[#f7f3e8]/85 backdrop-blur-xl">
+      <nav className="mx-auto flex h-18 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="grid size-9 place-items-center rounded-md border border-white/15 bg-white/[0.04] text-sm font-semibold text-white transition group-hover:border-white/30">
+          <span className="grid size-10 place-items-center rounded-full border border-[#111713]/15 bg-[#c8ff5a] text-sm font-semibold text-[#111713] transition group-hover:scale-105">
             CL
           </span>
-          <span className="hidden text-sm font-medium tracking-tight text-zinc-200 sm:block">
+          <span className="hidden text-sm font-semibold tracking-tight text-[#111713] sm:block">
             Research Portfolio
           </span>
         </Link>
@@ -29,8 +29,8 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "rounded-md px-3 py-2 text-sm text-zinc-400 transition hover:bg-white/[0.04] hover:text-white",
-                pathname === item.href && "bg-white/[0.06] text-white",
+                "rounded-full px-3.5 py-2 text-sm text-[#526058] transition hover:bg-[#183b2b]/8 hover:text-[#111713]",
+                pathname === item.href && "bg-[#183b2b] text-[#f7f3e8]",
               )}
             >
               {item.label}
@@ -44,7 +44,7 @@ export function Navbar() {
             href={profile.github}
             target="_blank"
             rel="noreferrer"
-            className="grid size-9 place-items-center rounded-md border border-white/10 text-zinc-400 transition hover:border-white/25 hover:text-white"
+            className="grid size-9 place-items-center rounded-full border border-[#111713]/15 text-[#183b2b] transition hover:border-[#111713]/30 hover:bg-[#fffaf0]"
           >
             <GitBranch size={17} />
           </a>
@@ -53,7 +53,7 @@ export function Navbar() {
             href={profile.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="grid size-9 place-items-center rounded-md border border-white/10 text-zinc-400 transition hover:border-white/25 hover:text-white"
+            className="grid size-9 place-items-center rounded-full border border-[#111713]/15 text-[#183b2b] transition hover:border-[#111713]/30 hover:bg-[#fffaf0]"
           >
             <Link2 size={17} />
           </a>
@@ -61,7 +61,7 @@ export function Navbar() {
 
         <button
           aria-label="Toggle menu"
-          className="grid size-10 place-items-center rounded-md border border-white/10 text-zinc-200 lg:hidden"
+          className="grid size-10 place-items-center rounded-full border border-[#111713]/15 text-[#111713] lg:hidden"
           onClick={() => setOpen((value) => !value)}
         >
           {open ? <X size={19} /> : <Menu size={19} />}
@@ -69,7 +69,7 @@ export function Navbar() {
       </nav>
 
       {open ? (
-        <div className="border-t border-white/10 bg-black/95 px-4 py-4 lg:hidden">
+        <div className="border-t border-[#111713]/10 bg-[#f7f3e8]/98 px-4 py-4 lg:hidden">
           <div className="mx-auto grid max-w-7xl gap-1">
             {navItems.map((item) => (
               <Link
@@ -77,8 +77,8 @@ export function Navbar() {
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className={cn(
-                  "rounded-md px-3 py-3 text-sm text-zinc-300 transition hover:bg-white/[0.05] hover:text-white",
-                  pathname === item.href && "bg-white/[0.06] text-white",
+                  "rounded-full px-3 py-3 text-sm text-[#526058] transition hover:bg-[#183b2b]/8 hover:text-[#111713]",
+                  pathname === item.href && "bg-[#183b2b] text-[#f7f3e8]",
                 )}
               >
                 {item.label}

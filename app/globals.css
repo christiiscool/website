@@ -19,13 +19,13 @@ html {
 }
 
 ::selection {
-  background: #e7e5e4;
-  color: #050505;
+  background: var(--accent);
+  color: var(--foreground);
 }
 
 .finance-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-  background-size: 42px 42px;
+    linear-gradient(rgba(24, 59, 43, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 59, 43, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
 }

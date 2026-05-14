@@ -18,12 +18,12 @@ export function ButtonLink({
   className,
 }: ButtonLinkProps) {
   const classes = cn(
-    "inline-flex h-11 items-center justify-center gap-2 rounded-md px-5 text-sm font-medium transition duration-200",
+    "inline-flex h-11 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition duration-200",
     variant === "primary" &&
-      "bg-stone-100 text-zinc-950 hover:bg-white hover:shadow-[0_0_30px_rgba(255,255,255,0.16)]",
+      "bg-[#c8ff5a] text-[#111713] shadow-[0_12px_30px_rgba(56,89,35,0.16)] hover:bg-[#b7f247]",
     variant === "secondary" &&
-      "border border-white/12 bg-white/[0.03] text-stone-100 hover:border-white/25 hover:bg-white/[0.07]",
-    variant === "ghost" && "text-zinc-300 hover:bg-white/[0.05] hover:text-white",
+      "border border-[#111713]/15 bg-[#fffaf0] text-[#111713] hover:border-[#111713]/30 hover:bg-white",
+    variant === "ghost" && "text-[#183b2b] hover:bg-[#183b2b]/8",
     className,
   );
 

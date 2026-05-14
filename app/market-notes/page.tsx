@@ -15,14 +15,14 @@ export default function MarketNotesPage() {
           {marketNotes.map((note) => (
             <article
               key={note.title}
-              className="group rounded-lg border border-white/10 bg-white/[0.035] p-6 transition hover:border-white/20 hover:bg-white/[0.055]"
+              className="group rounded-[28px] border border-[#111713]/10 bg-[#fffaf0] p-6 shadow-[0_16px_42px_rgba(24,59,43,0.08)] transition hover:-translate-y-1 hover:border-[#183b2b]/25"
             >
-              <p className="text-xs uppercase tracking-[0.24em] text-zinc-500">{note.date}</p>
-              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-stone-50">
+              <p className="text-xs uppercase tracking-[0.24em] text-[#667064]">{note.date}</p>
+              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-[#111713]">
                 {note.title}
               </h2>
-              <p className="mt-3 text-sm leading-6 text-zinc-400">{note.summary}</p>
-              <button className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-zinc-200 transition group-hover:text-white">
+              <p className="mt-3 text-sm leading-6 text-[#445046]">{note.summary}</p>
+              <button className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#183b2b] transition group-hover:text-[#111713]">
                 Read note
                 <ArrowRight size={15} className="transition group-hover:translate-x-1" />
               </button>

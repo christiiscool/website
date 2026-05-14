@@ -19,22 +19,22 @@ export default function ExperiencePage() {
         />
         <div className="mt-10 space-y-5">
           {experiences.map((item) => (
-            <article key={item.role} className="rounded-lg border border-white/10 bg-white/[0.035] p-6">
+            <article key={item.role} className="rounded-[28px] border border-[#111713]/10 bg-[#fffaf0] p-6 shadow-[0_16px_42px_rgba(24,59,43,0.08)]">
               <div className="flex items-start gap-4">
-                <div className="grid size-11 shrink-0 place-items-center rounded-md border border-white/10 bg-black/40 text-stone-200">
+                <div className="grid size-11 shrink-0 place-items-center rounded-full border border-[#111713]/10 bg-[#c8ff5a] text-[#111713]">
                   <BriefcaseBusiness size={19} />
                 </div>
                 <div>
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
-                    <h2 className="text-xl font-semibold tracking-tight text-stone-50">
+                    <h2 className="text-xl font-semibold tracking-tight text-[#111713]">
                       {item.role}
                     </h2>
-                    <span className="text-xs uppercase tracking-[0.22em] text-zinc-500">
+                    <span className="text-xs uppercase tracking-[0.22em] text-[#667064]">
                       {item.period}
                     </span>
                   </div>
-                  <p className="mt-1 text-sm text-zinc-500">{item.firm}</p>
-                  <p className="mt-4 text-sm leading-6 text-zinc-400">{item.summary}</p>
+                  <p className="mt-1 text-sm text-[#667064]">{item.firm}</p>
+                  <p className="mt-4 text-sm leading-6 text-[#445046]">{item.summary}</p>
                 </div>
               </div>
             </article>

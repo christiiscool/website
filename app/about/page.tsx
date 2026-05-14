@@ -18,14 +18,14 @@ export default function AboutPage() {
         />
         <div className="grid gap-4 sm:grid-cols-2">
           {highlights.map((item) => (
-            <div key={item.label} className="rounded-lg border border-white/10 bg-white/[0.035] p-5">
-              <item.icon size={22} className="text-stone-200" />
-              <p className="mt-4 text-sm font-medium text-stone-100">{item.label}</p>
+            <div key={item.label} className="rounded-[26px] border border-[#111713]/10 bg-[#fffaf0] p-5 shadow-[0_14px_38px_rgba(24,59,43,0.07)]">
+              <item.icon size={22} className="text-[#183b2b]" />
+              <p className="mt-4 text-sm font-semibold text-[#111713]">{item.label}</p>
             </div>
           ))}
         </div>
       </section>
-      <section className="border-t border-white/10 bg-white/[0.025]">
+      <section className="border-t border-[#111713]/10 bg-[#d8e4c9]">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Working style"
@@ -34,14 +34,14 @@ export default function AboutPage() {
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {skillGroups.map((group) => (
-              <div key={group.label} className="rounded-lg border border-white/10 bg-black/35 p-5">
-                <group.icon size={22} className="text-stone-200" />
-                <h2 className="mt-5 font-semibold text-stone-50">{group.label}</h2>
+              <div key={group.label} className="rounded-[26px] border border-[#111713]/10 bg-[#fffaf0] p-5">
+                <group.icon size={22} className="text-[#183b2b]" />
+                <h2 className="mt-5 font-semibold text-[#111713]">{group.label}</h2>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-md border border-white/10 px-2.5 py-1 text-xs text-zinc-400"
+                      className="rounded-full border border-[#111713]/10 bg-[#edf3dc] px-2.5 py-1 text-xs text-[#344238]"
                     >
                       {skill}
                     </span>
