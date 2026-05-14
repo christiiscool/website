@@ -4,9 +4,9 @@ import { Navbar } from "@/components/navbar";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Christopher Lee | Quantitative Investment Research",
+  title: "Christi Chia | Investment Research Portfolio",
   description:
-    "Institutional-style portfolio for behavioural finance, quantitative investing, AI sentiment analysis, private markets, and Python data science projects.",
+    "Portfolio for Christi Chia, covering behavioural finance, asset management, private equity, private credit, portfolio management, and investment research.",
 };
 
 export default function RootLayout({

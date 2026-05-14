@@ -15,7 +15,7 @@ export default function ExperiencePage() {
         <SectionHeading
           eyebrow="Timeline"
           title="Experience snapshot"
-          description="Replace these placeholders with specific roles, firms, dates, achievements, and resume links when ready."
+          description="A resume-backed view of finance internships, private markets deal work, equity research leadership, live portfolio management, and academic achievements."
         />
         <div className="mt-10 space-y-5">
           {experiences.map((item) => (

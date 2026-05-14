@@ -131,7 +131,7 @@ export default function Home() {
         <SectionHeading
           eyebrow="Featured research"
           title="Institutional-style notes with a data-first lens."
-          description="Selected research placeholders designed for reports, memos, and publishable market analysis."
+          description="Selected equity research, private markets analysis, and behavioural finance work drawn from deal experience, live investing, and student-managed fund research."
         />
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {research.slice(0, 2).map((item) => (

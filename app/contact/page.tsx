@@ -52,9 +52,8 @@ export default function ContactPage() {
             Investment research, systematic strategy, and AI finance conversations.
           </h2>
           <p className="mt-5 text-base leading-7 text-[#d8e4c9]">
-            Replace the placeholder email and social links in the data file, then connect a
-            form provider later if you want a hosted contact form. For now, email keeps the
-            site simple, fast, and Vercel-ready.
+            Best reached by email or LinkedIn for investment research conversations,
+            internship opportunities, portfolio discussions, and finance or data projects.
           </p>
           <ButtonLink href={`mailto:${profile.email}`} external className="mt-8">
             Email me
