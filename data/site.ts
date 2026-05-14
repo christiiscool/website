@@ -62,30 +62,6 @@ export const research: ResearchItem[] = [
     date: "2025",
     category: "Public Markets",
   },
-  {
-    title: "European Private Credit Fund Risk Review",
-    summary:
-      "Portfolio and credit risk analysis for a US$1.3B evergreen senior secured credit fund, focused on first-lien positioning and downside protection.",
-    tags: ["Private credit", "Credit risk", "Capital raise"],
-    date: "2025",
-    category: "Private Markets",
-  },
-  {
-    title: "Japan Multifamily Real Estate Fund Underwriting",
-    summary:
-      "Asset-level and macro analysis for a US$50M Japanese multifamily real estate private equity fund, including LBO analysis, IRR scenarios, and downside cases.",
-    tags: ["Real estate", "Private equity", "LBO", "Underwriting"],
-    date: "2025",
-    category: "Private Markets",
-  },
-  {
-    title: "Behavioural Finance and Asset Management Notes",
-    summary:
-      "Applied research lens connecting investor behaviour, market incentives, portfolio construction, and systematic decision-making.",
-    tags: ["Behavioural finance", "Asset management", "Portfolio construction"],
-    date: "Ongoing",
-    category: "Academic Research",
-  },
 ];
 
 export type ProjectItem = {
