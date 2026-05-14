@@ -9,7 +9,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Get in touch."
-        description="Reach out for research conversations, investment analysis collaborations, data projects, or opportunities in finance and AI."
+        description="Reach out by email or through my LinkedIn profile for research conversations, investment analysis collaborations, data projects, or finance opportunities."
       />
       <section className="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
         <div className="rounded-[28px] border border-[#111713]/10 bg-[#fffaf0] p-6 shadow-[0_16px_42px_rgba(24,59,43,0.08)]">

@@ -22,7 +22,7 @@ export const profile = {
   location: "Singapore",
   summary:
     "I combine behavioural finance, asset management, private markets experience, and data-driven research to evaluate investments across public and private markets.",
-  bio: "I am pursuing a Bachelor of Integrative Studies in Behavioural Finance and Asset Management at Singapore Management University, where I am a Global Impact Scholar and Dean's List recipient. My experience spans Blackstone finance analytics, private equity and private credit deal work at Alta Exchange, live portfolio management, and student-managed equity research.",
+  bio: "I am pursuing a Bachelor of Integrative Studies in Behavioural Finance and Asset Management at Singapore Management University, where I am a Global Impact Scholar and Dean's List recipient. My experience spans Blackstone finance analytics, private equity and private credit deal work at Alta Exchange, live portfolio management, and student-managed equity research. More detail is available through my LinkedIn profile.",
 };
 
 export const navItems = [
@@ -124,6 +124,11 @@ export const experiences = [
     period: "Jun 2025 - Dec 2025",
     summary:
       "Supported global offices with fund-level performance analysis across multi-billion dollar private equity and private credit vehicles. Evaluated FX exposures, computed tax returns, automated reporting with VBA, Macros and Power BI, and developed dashboards for investment monitoring and capital deployment.",
+    details: [
+      "Analysed fund-level performance across private equity and private credit vehicles for global Blackstone offices.",
+      "Evaluated FX exposures, tax returns, fund performance drivers, and portfolio company reporting outputs.",
+      "Automated recurring workflows with VBA, Macros, and Power BI to improve reporting efficiency and investment monitoring.",
+    ],
   },
   {
     role: "Private Equity Intern",
@@ -131,6 +136,11 @@ export const experiences = [
     period: "Jan 2025 - Jun 2025",
     summary:
       "Supported private equity and private credit deal origination and execution, including valuation analysis, underwriting, and investment memo preparation. Analysed a US$1.3B European private credit fund and a US$50M Japanese multifamily real estate private equity fund.",
+    details: [
+      "Worked on private equity and private credit deal origination, valuation analysis, underwriting, and investment memo preparation.",
+      "Reviewed a US$1.3B evergreen European senior secured private credit fund, focusing on portfolio risk, first-lien positioning, and downside protection.",
+      "Conducted asset-level and macro analysis for a US$50M Japanese multifamily real estate private equity fund, including underwriting, LBO analysis, IRR cases, and downside scenarios.",
+    ],
   },
   {
     role: "Sector Head - TMT",
@@ -138,6 +148,11 @@ export const experiences = [
     period: "Aug 2024 - Present",
     summary:
       "Lead TMT coverage for SMU's live student-run long/short equity fund with c. SGD 200k AUM. Initiated a BUY recommendation on Dell Technologies with 20.9% upside, driven by AI server demand, hybrid-cloud infrastructure strength, and enterprise AI backlog growth.",
+    details: [
+      "Lead technology, media, and telecommunications coverage for SMU's live student-run long/short equity fund.",
+      "Developed a Dell Technologies investment thesis centred on AI-optimised server demand, hybrid-cloud infrastructure, and enterprise AI backlog growth.",
+      "Contribute to stock pitches, investment discussions, and portfolio research within a c. SGD 200k AUM student-managed mandate.",
+    ],
   },
   {
     role: "Portfolio Management",
@@ -145,13 +160,36 @@ export const experiences = [
     period: "Jan 2025 - Present",
     summary:
       "Started a live long/short multi-asset fund using fundamental and technical analysis. Achieved a 60% return in 2025, outperforming the S&P 500 by 34%, with allocations across cash, options, bonds, and equities.",
+    details: [
+      "Manage a live long/short multi-asset portfolio using fundamental and technical analysis across sectors.",
+      "Built an allocation framework spanning cash, options, bonds, and equities.",
+      "Track portfolio results against the S&P 500 while refining risk allocation and position sizing decisions.",
+    ],
   },
+];
+
+export const education = [
   {
-    role: "Bachelor of Integrative Studies",
-    firm: "Singapore Management University",
+    school: "Singapore Management University",
+    credential: "Bachelor of Integrative Studies in Behavioural Finance and Asset Management",
     period: "Aug 2024 - Apr 2028",
     summary:
-      "Studying Behavioural Finance and Asset Management. GPA: 3.85/4.00, Dean's List AY24-25, Global Impact Scholarship Award recipient, and champion of the APECS Venture Capital Competition 2025 and Social Impact Catalyst Case Competition 2025.",
+      "Global Impact Scholarship Award recipient and Dean's List AY24-25. Champion of the APECS Venture Capital Competition 2025 and Social Impact Catalyst Case Competition 2025.",
+    details: [
+      "Involvements include SMU-SMIF, TMC External Relations Director, SMU Climb competitive team, Project Hai Khun Team Lead, and SMU Athletics.",
+      "Academic focus combines behavioural finance, asset management, markets, and decision-making under uncertainty.",
+    ],
+  },
+  {
+    school: "National Junior College",
+    credential: "GCE A-Level Examinations",
+    period: "Jan 2018 - Dec 2023",
+    summary:
+      "Achieved 90/90 rank points. Organised a finance and business course for over 80 students through the Sapphire Scholars Programme and led service projects that raised more than $20,000 for cancer patients.",
+    details: [
+      "Spearheaded Project Aster and Above x Beyond, combining fundraising, team leadership, and community impact.",
+      "Early exposure to finance education, business course design, and student-led initiatives.",
+    ],
   },
 ];
 
