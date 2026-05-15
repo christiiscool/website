@@ -55,6 +55,20 @@ const allocationData = [
   { factor: "Behavioural", preCovid: 0.18, covid: 0.31, lateCycle: 0.24 },
 ];
 
+const wealthData = [
+  { label: "Jan 2018", unhedged: 100, overlay: 100, note: "Backtest starts" },
+  { label: "Dec 2018", unhedged: 106, overlay: 106, note: "Early factor timing gains" },
+  { label: "Dec 2019", unhedged: 115, overlay: 115, note: "Pre-COVID accumulation" },
+  { label: "Feb 2020", unhedged: 116, overlay: 119, note: "Put hedge helped during stress" },
+  { label: "Dec 2020", unhedged: 112, overlay: 116, note: "Drawdown recovery begins" },
+  { label: "Dec 2021", unhedged: 126, overlay: 130, note: "Momentum leadership returns" },
+  { label: "Mar 2022", unhedged: 120, overlay: 124, note: "Overlay softened losses" },
+  { label: "Dec 2022", unhedged: 111, overlay: 115, note: "Largest drawdown window" },
+  { label: "Dec 2023", unhedged: 131, overlay: 136, note: "Recovery and factor rotation" },
+  { label: "Dec 2024", unhedged: 151, overlay: 158, note: "AI-led momentum period" },
+  { label: "Mar 2026", unhedged: 165, overlay: 172, note: "Ending wealth index" },
+];
+
 function BarGroup({ data, tone = "green" }: { data: MetricDatum[]; tone?: "green" | "dark" }) {
   const [active, setActive] = useState<string | null>(null);
   const max = Math.max(...data.map((item) => Math.abs(item.value)), 1);
@@ -96,8 +110,176 @@ function BarGroup({ data, tone = "green" }: { data: MetricDatum[]; tone?: "green
   );
 }
 
+function WealthGrowthChart() {
+  const [activeIndex, setActiveIndex] = useState(wealthData.length - 1);
+  const chartWidth = 720;
+  const chartHeight = 300;
+  const padding = 34;
+  const values = wealthData.flatMap((item) => [item.unhedged, item.overlay]);
+  const min = Math.min(...values) * 0.96;
+  const max = Math.max(...values) * 1.04;
+  const active = wealthData[activeIndex];
+
+  const pointFor = (value: number, index: number) => {
+    const x =
+      padding + (index / (wealthData.length - 1)) * (chartWidth - padding * 2);
+    const y =
+      chartHeight -
+      padding -
+      ((value - min) / (max - min)) * (chartHeight - padding * 2);
+
+    return { x, y };
+  };
+
+  const pathFor = (key: "unhedged" | "overlay") =>
+    wealthData
+      .map((item, index) => {
+        const point = pointFor(item[key], index);
+        return `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`;
+      })
+      .join(" ");
+
+  const activeUnhedged = pointFor(active.unhedged, activeIndex);
+  const activeOverlay = pointFor(active.overlay, activeIndex);
+
+  return (
+    <div className="grid gap-6 lg:grid-cols-[1.35fr_0.65fr]">
+      <div className="rounded-[26px] bg-[#edf3dc] p-4">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h3 className="font-semibold text-[#111713]">Wealth index over time</h3>
+            <p className="mt-1 text-sm text-[#667064]">
+              Illustrative reconstruction from report milestones, indexed to 100.
+            </p>
+          </div>
+          <div className="flex gap-3 text-xs font-semibold text-[#445046]">
+            <span className="inline-flex items-center gap-2">
+              <span className="size-2 rounded-full bg-[#183b2b]" />
+              Overlay
+            </span>
+            <span className="inline-flex items-center gap-2">
+              <span className="size-2 rounded-full bg-[#94a38c]" />
+              Unhedged
+            </span>
+          </div>
+        </div>
+        <svg
+          viewBox={`0 0 ${chartWidth} ${chartHeight}`}
+          role="img"
+          aria-label="Interactive wealth index chart"
+          className="h-auto w-full overflow-visible"
+        >
+          {[100, 120, 140, 160].map((tick) => {
+            const y = pointFor(tick, 0).y;
+            return (
+              <g key={tick}>
+                <line
+                  x1={padding}
+                  x2={chartWidth - padding}
+                  y1={y}
+                  y2={y}
+                  stroke="#183b2b"
+                  strokeOpacity="0.10"
+                />
+                <text x={0} y={y + 4} fill="#667064" fontSize="12">
+                  {tick}
+                </text>
+              </g>
+            );
+          })}
+          <path d={pathFor("unhedged")} fill="none" stroke="#94a38c" strokeWidth="4" />
+          <path d={pathFor("overlay")} fill="none" stroke="#183b2b" strokeWidth="4.5" />
+          <line
+            x1={activeOverlay.x}
+            x2={activeOverlay.x}
+            y1={padding}
+            y2={chartHeight - padding}
+            stroke="#183b2b"
+            strokeDasharray="4 6"
+            strokeOpacity="0.35"
+          />
+          {wealthData.map((item, index) => {
+            const overlayPoint = pointFor(item.overlay, index);
+            const unhedgedPoint = pointFor(item.unhedged, index);
+            return (
+              <g
+                key={item.label}
+                role="button"
+                tabIndex={0}
+                aria-label={`Show ${item.label}`}
+                className="cursor-pointer outline-none"
+                onMouseEnter={() => setActiveIndex(index)}
+                onFocus={() => setActiveIndex(index)}
+                onClick={() => setActiveIndex(index)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    setActiveIndex(index);
+                  }
+                }}
+              >
+                <circle
+                  cx={overlayPoint.x}
+                  cy={overlayPoint.y}
+                  r={activeIndex === index ? 8 : 5}
+                  fill="#c8ff5a"
+                  stroke="#183b2b"
+                  strokeWidth="3"
+                />
+                <circle cx={unhedgedPoint.x} cy={unhedgedPoint.y} r="4" fill="#94a38c" />
+              </g>
+            );
+          })}
+          <circle cx={activeOverlay.x} cy={activeOverlay.y} r="9" fill="#c8ff5a" stroke="#183b2b" strokeWidth="3" />
+          <circle cx={activeUnhedged.x} cy={activeUnhedged.y} r="6" fill="#94a38c" />
+        </svg>
+      </div>
+
+      <div className="rounded-[26px] bg-[#183b2b] p-5 text-[#f7f3e8]">
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#c8ff5a]">
+          Selected point
+        </p>
+        <h3 className="mt-3 text-2xl font-semibold">{active.label}</h3>
+        <div className="mt-5 grid gap-3">
+          <div className="rounded-2xl bg-[#f7f3e8]/10 p-4">
+            <p className="text-xs uppercase tracking-[0.18em] text-[#d8e4c9]">
+              Overlay wealth
+            </p>
+            <p className="mt-2 font-mono text-3xl">{active.overlay.toFixed(0)}</p>
+          </div>
+          <div className="rounded-2xl bg-[#f7f3e8]/10 p-4">
+            <p className="text-xs uppercase tracking-[0.18em] text-[#d8e4c9]">
+              Unhedged wealth
+            </p>
+            <p className="mt-2 font-mono text-3xl">{active.unhedged.toFixed(0)}</p>
+          </div>
+        </div>
+        <p className="mt-5 text-sm leading-6 text-[#d8e4c9]">{active.note}</p>
+        <div className="mt-5 flex flex-wrap gap-2">
+          {wealthData.map((item, index) => (
+            <button
+              key={item.label}
+              type="button"
+              onClick={() => setActiveIndex(index)}
+              className={cn(
+                "rounded-full px-3 py-1 text-xs font-semibold transition",
+                activeIndex === index
+                  ? "bg-[#c8ff5a] text-[#111713]"
+                  : "bg-[#f7f3e8]/10 text-[#d8e4c9] hover:bg-[#f7f3e8]/18",
+              )}
+            >
+              {item.label.split(" ").at(-1)}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function Qf206InteractiveCharts() {
-  const [view, setView] = useState<"models" | "hedge" | "events" | "factors">("models");
+  const [view, setView] = useState<"wealth" | "models" | "hedge" | "events" | "factors">(
+    "wealth",
+  );
 
   const modelMetrics = useMemo(
     () =>
@@ -122,6 +304,7 @@ export function Qf206InteractiveCharts() {
         </div>
         <div className="flex flex-wrap gap-2">
           {[
+            ["wealth", "Wealth"],
             ["models", "Models"],
             ["hedge", "Hedge"],
             ["events", "Stress events"],
@@ -145,6 +328,8 @@ export function Qf206InteractiveCharts() {
       </div>
 
       <div className="mt-8">
+        {view === "wealth" ? <WealthGrowthChart /> : null}
+
         {view === "models" ? (
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <BarGroup data={modelMetrics} tone="dark" />
