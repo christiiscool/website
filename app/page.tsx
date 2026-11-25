@@ -1,212 +1,199 @@
-import { ArrowRight, GitBranch, Link2 } from "lucide-react";
-import { ButtonLink } from "@/components/button-link";
-import { ContactCta } from "@/components/contact-cta";
-import { MotionDiv, MotionSection } from "@/components/motion";
-import { ProjectCard } from "@/components/project-card";
-import { ResearchCard } from "@/components/research-card";
-import { SectionHeading } from "@/components/section-heading";
-import {
-  experiences,
-  highlights,
-  profile,
-  projects,
-  research,
-  skillGroups,
-  stats,
-} from "@/data/site";
+/* eslint-disable @next/next/no-img-element */
+import "../styles/artboard-home.css";
+
+const navigation = [
+  { label: "home", href: "#top", left: 64.4, width: 5.5 },
+  { label: "about", href: "#about", left: 70.8, width: 5.6 },
+  { label: "my work", href: "#work", left: 77.0, width: 6.9 },
+  { label: "journal", href: "#journal", left: 84.5, width: 7.3 },
+  { label: "say hi", href: "#contact", left: 92.2, width: 6.0 },
+];
+
+const selectedWork = [
+  {
+    number: "01",
+    type: "quantitative research / 2026",
+    title: "Dynamic Factor Timing",
+    description:
+      "A walk-forward study of machine-learning factor allocation and an options-based risk overlay.",
+    href: "/research/qf206-factor-timing",
+  },
+  {
+    number: "02",
+    type: "behavioural finance / 2026",
+    title: "Where Is Alpha Truly Generated?",
+    description:
+      "Exploring investor behaviour, information frictions and the search for systematic alpha.",
+    href: "/research/alpha-generation",
+  },
+  {
+    number: "03",
+    type: "other things i've built",
+    title: "Projects & Experiments",
+    description:
+      "Little ideas, research tools and experiments I’ve been tinkering with.",
+    href: "/projects",
+  },
+];
 
 export default function Home() {
   return (
-    <>
-      <section className="finance-grid relative overflow-hidden border-b border-[#111713]/10 bg-[#f7f3e8]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_22%,rgba(200,255,90,0.48),transparent_24%),radial-gradient(circle_at_10%_20%,rgba(216,228,201,0.8),transparent_30%),linear-gradient(180deg,rgba(247,243,232,0.32),#f7f3e8_86%)]" />
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
-          <MotionDiv
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55 }}
-            className="flex flex-col justify-center"
+    <div className="artboard-home" id="top">
+      <a className="artboard-skip" href="#about">
+        Skip to content
+      </a>
+      <section className="artboard-hero" aria-label="Christi's personal corner of the internet">
+        <div className="artboard-desktop">
+          <img
+            className="artboard-full-hero"
+            src="/art/hero-collage.webp"
+            width={1536}
+            height={1024}
+            alt=""
+            loading="eager"
+            fetchPriority="high"
+          />
+          <div className="artboard-sr-only">
+            <h1>Christi</h1>
+            <p>
+              Markets, code, climbing and collecting interesting experiences. A little
+              place for my research, projects and the rest of life.
+            </p>
+          </div>
+          <nav aria-label="Homepage navigation">
+            {navigation.map((item) => (
+              <a
+                key={item.label}
+                className="artboard-spot"
+                href={item.href}
+                style={{ left: `${item.left}%`, top: "2.7%", width: `${item.width}%`, height: "5.1%" }}
+              >
+                <span className="artboard-sr-only">{item.label}</span>
+              </a>
+            ))}
+          </nav>
+          <a
+            className="artboard-spot"
+            href="#work"
+            style={{ left: "5.3%", top: "55.8%", width: "17.6%", height: "8.0%" }}
           >
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-[#59705f]">
-              Quantitative Investment Research
-            </p>
-            <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-[#111713] md:text-7xl">
-              {profile.name}
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#445046] md:text-xl">
-              {profile.summary}
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/research">View research</ButtonLink>
-              <ButtonLink href="/projects" variant="secondary">
-                Explore projects
-                <ArrowRight size={16} />
-              </ButtonLink>
-            </div>
-            <div className="mt-8 flex items-center gap-3">
-              <a
-                aria-label="GitHub"
-                href={profile.github}
-                target="_blank"
-                rel="noreferrer"
-                className="grid size-11 place-items-center rounded-full border border-[#111713]/15 bg-[#fffaf0] text-[#183b2b] transition hover:border-[#111713]/30 hover:bg-[#edf3dc]"
-              >
-                <GitBranch size={19} />
-              </a>
-              <a
-                aria-label="LinkedIn"
-                href={profile.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="grid size-11 place-items-center rounded-full border border-[#111713]/15 bg-[#fffaf0] text-[#183b2b] transition hover:border-[#111713]/30 hover:bg-[#edf3dc]"
-              >
-                <Link2 size={19} />
-              </a>
-            </div>
-          </MotionDiv>
+            <span className="artboard-sr-only">Explore my work</span>
+          </a>
+          <a
+            className="artboard-spot"
+            href="#about"
+            style={{ left: "7.0%", top: "65.0%", width: "14.8%", height: "5.3%" }}
+          >
+            <span className="artboard-sr-only">Get to know me</span>
+          </a>
+        </div>
 
-          <MotionDiv
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="rounded-[36px] border border-[#111713]/10 bg-[#fffaf0]/85 p-4 shadow-[0_30px_90px_rgba(24,59,43,0.18)] backdrop-blur"
-          >
-            <div className="rounded-[28px] border border-[#111713]/10 bg-[#f8f6ec] p-5">
-              <div className="flex items-center justify-between border-b border-[#111713]/10 pb-4">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.26em] text-[#667064]">
-                    Research Monitor
-                  </p>
-                  <p className="mt-2 text-sm text-[#445046]">Signals, sentiment, risk</p>
-                </div>
-                <span className="rounded-full bg-[#c8ff5a] px-3 py-1 text-xs font-semibold text-[#111713]">
-                  Live draft
+        <div className="artboard-mobile">
+          <header className="artboard-mobile-header">
+            <a href="#top" className="artboard-mobile-brand">christi ✳</a>
+            <details className="artboard-mobile-menu">
+              <summary>menu <span aria-hidden="true">＋</span></summary>
+              <nav aria-label="Mobile navigation">
+                <a href="#top">home</a>
+                <a href="#about">about</a>
+                <a href="#work">my work</a>
+                <a href="#journal">journal</a>
+                <a href="#contact">say hi</a>
+              </nav>
+            </details>
+          </header>
+          <div className="artboard-mobile-intro">
+            <div className="artboard-mobile-star" aria-hidden="true">☆</div>
+            <h1>Christi<span className="artboard-dot">.</span></h1>
+            <p className="artboard-mobile-tagline">
+              markets, code, climbing &amp;<br /> collecting interesting experiences ♡
+            </p>
+            <div className="artboard-mobile-actions">
+              <a className="artboard-mobile-oval" href="#work">explore my work <span aria-hidden="true">→</span></a>
+              <a className="artboard-mobile-plain" href="#about">get to know me <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div className="artboard-mobile-collage">
+            <img
+              src="/art/hero-mobile-collage.webp"
+              width={946}
+              height={937}
+              loading="eager"
+              alt="A nostalgic collage of Christi's birthday in a retro camcorder, a black-and-white photo filmstrip, a Paris postcard, pink stickers and keepsakes."
+            />
+          </div>
+        </div>
+      </section>
+
+      <div className="artboard-ticker" aria-hidden="true">✳ &nbsp; photos, thoughts &amp; little things &nbsp; ♡ &nbsp; ✳</div>
+
+      <section id="about" className="artboard-section artboard-about">
+        <div className="artboard-index">01 / WHO'S THIS?</div>
+        <div className="artboard-section-main">
+          <p className="artboard-overline">a little introduction ♡</p>
+          <h2>hi, i'm christi.<br /><em>nice to meet you!</em></h2>
+          <p>
+            I&apos;m a Singapore-based student who likes asking questions about markets,
+            people and the way the world works. I love turning interesting ideas into
+            research and small things I can actually build.
+          </p>
+          <p>
+            When I&apos;m away from my laptop, I&apos;m probably climbing, travelling,
+            taking photos or planning my next little adventure.
+          </p>
+          <a href="/about" className="artboard-text-link">a bit more about me <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section id="work" className="artboard-section artboard-work">
+        <div className="artboard-index">02 / THE WORK FILES</div>
+        <div className="artboard-section-main">
+          <p className="artboard-overline">things i've made ✳</p>
+          <h2>curiosity, but<br /><em>make it a project.</em></h2>
+          <p>Some research, code and ideas that made it out of my head and onto a page.</p>
+          <div className="artboard-work-list">
+            {selectedWork.map((item) => (
+              <a href={item.href} className="artboard-work-item" key={item.number}>
+                <span className="artboard-work-number">{item.number}</span>
+                <span className="artboard-work-description">
+                  <small>{item.type}</small>
+                  <strong>{item.title}</strong>
+                  <span>{item.description}</span>
                 </span>
-              </div>
-              <div className="mt-6 grid grid-cols-3 gap-3">
-                {stats.map((stat) => (
-                  <div key={stat.label} className="rounded-2xl border border-[#111713]/10 bg-[#fffaf0] p-3">
-                    <p className="text-[11px] uppercase tracking-[0.18em] text-[#667064]">
-                      {stat.label}
-                    </p>
-                    <p className="mt-3 text-sm font-semibold text-[#111713]">{stat.value}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 h-44 rounded-[24px] border border-[#111713]/10 bg-[#fffaf0] p-4">
-                <div className="flex h-full items-end gap-2">
-                  {[38, 52, 44, 68, 61, 78, 56, 83, 72, 88, 69, 92].map((height) => (
-                    <div key={height} className="flex-1 rounded-full bg-[#183b2b]/10">
-                      <div
-                        className="mt-auto rounded-full bg-[#183b2b]"
-                        style={{ height: `${height}%` }}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-6 grid gap-3">
-                {highlights.slice(0, 4).map((item) => (
-                  <div
-                    key={item.label}
-                    className="flex items-center gap-3 rounded-full border border-[#111713]/10 bg-[#fffaf0] p-3"
-                  >
-                    <item.icon size={17} className="text-[#183b2b]" />
-                    <span className="text-sm text-[#445046]">{item.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </MotionDiv>
-        </div>
-      </section>
-
-      <MotionSection
-        initial={{ opacity: 0, y: 18 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.45 }}
-        className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8"
-      >
-        <SectionHeading
-          eyebrow="Featured research"
-          title="Institutional-style notes with a data-first lens."
-          description="Selected equity research, private markets analysis, and behavioural finance work drawn from deal experience, live investing, and student-managed fund research."
-        />
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
-          {research.slice(0, 2).map((item) => (
-            <ResearchCard key={item.title} item={item} />
-          ))}
-        </div>
-      </MotionSection>
-
-      <section className="border-y border-[#111713]/10 bg-[#d8e4c9]">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Featured projects"
-            title="Research tools, dashboards, and systematic workflows."
-          />
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
-            {projects.map((item) => (
-              <ProjectCard key={item.title} item={item} />
+                <span className="artboard-work-arrow" aria-hidden="true">↗</span>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-          <SectionHeading
-            eyebrow="Experience snapshot"
-            title="A portfolio built around market judgment and technical execution."
-            description={profile.bio}
-          />
-          <div className="space-y-4">
-            {experiences.map((item) => (
-            <div key={item.role} className="rounded-[26px] border border-[#111713]/10 bg-[#fffaf0] p-5 shadow-[0_14px_38px_rgba(24,59,43,0.07)]">
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                  <h3 className="font-semibold text-[#111713]">{item.role}</h3>
-                  <span className="text-xs uppercase tracking-[0.2em] text-[#667064]">
-                    {item.period}
-                  </span>
-                </div>
-                <p className="mt-1 text-sm text-[#667064]">{item.firm}</p>
-                <p className="mt-3 text-sm leading-6 text-[#445046]">{item.summary}</p>
-              </div>
-            ))}
-          </div>
+      <section id="journal" className="artboard-section artboard-journal">
+        <div className="artboard-index">03 / LITTLE NOTES</div>
+        <div className="artboard-section-main">
+          <p className="artboard-overline">pages from my brain ✿</p>
+          <h2>the little<br /><em>thought archive.</em></h2>
+          <p>
+            A place for everything worth remembering: questions I&apos;m exploring,
+            market notes and occasional stories beyond my desk.
+          </p>
+          <a href="/market-notes" className="artboard-text-link">browse my notes <span aria-hidden="true">↗</span></a>
         </div>
       </section>
 
-      <section className="border-y border-[#111713]/10 bg-[#183b2b]">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Skills and stack"
-            title="Finance, research, and data tooling."
-            className="[&_h2]:text-[#f7f3e8] [&_p:first-child]:text-[#c8ff5a]"
-          />
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {skillGroups.map((group) => (
-              <div key={group.label} className="rounded-[26px] border border-[#f7f3e8]/12 bg-[#f7f3e8]/8 p-5">
-                <group.icon size={22} className="text-[#c8ff5a]" />
-                <h3 className="mt-5 font-semibold text-[#f7f3e8]">{group.label}</h3>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {group.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full border border-[#f7f3e8]/12 px-2.5 py-1 text-xs text-[#d8e4c9]"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
+      <section id="contact" className="artboard-section artboard-contact">
+        <div className="artboard-index">04 / SAY HELLO</div>
+        <div className="artboard-section-main">
+          <p className="artboard-overline">you made it to the end! ♡</p>
+          <h2>come say <em>hi!</em></h2>
+          <p>About markets, projects, travel plans, climbing—or anything interesting.</p>
+          <a className="artboard-contact-button" href="mailto:christichia@gmail.com">send me a little note <span aria-hidden="true">↗</span></a>
+          <div className="artboard-socials">
+            <a href="https://github.com/christiiscool" target="_blank" rel="noreferrer">github ↗</a>
+            <a href="https://www.linkedin.com/in/christichia" target="_blank" rel="noreferrer">linkedin ↗</a>
           </div>
         </div>
       </section>
-
-      <ContactCta />
-    </>
+      <footer className="artboard-footer">christi's corner ✳ <span>made with little moments ♡</span></footer>
+    </div>
   );
 }
