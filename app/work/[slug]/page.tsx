@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CreativeShell } from "@/components/creative-shell";
 import { CreativeProjectArt } from "@/components/creative-project-art";
+import { DynamicFactorReport } from "@/components/dynamic-factor-report";
 import { creativeProjects, getCreativeProject } from "@/data/creative-projects";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -16,6 +17,9 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
 export default async function WorkDetailPage({params}: Props) {
   const project = getCreativeProject((await params).slug);
   if (!project) notFound();
+  if (project.slug === "dynamic-factor-timing") {
+    return <CreativeShell current="/work"><DynamicFactorReport /></CreativeShell>;
+  }
   const nextProject = creativeProjects[(creativeProjects.findIndex((item) => item.slug === project.slug) + 1) % creativeProjects.length];
   return <CreativeShell current="/work">
     <article className="cp-detail-page">
