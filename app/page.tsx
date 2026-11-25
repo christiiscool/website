@@ -3,10 +3,10 @@ import "../styles/artboard-home.css";
 
 const navigation = [
   { label: "home", href: "#top", left: 64.4, width: 5.5 },
-  { label: "about", href: "#about", left: 70.8, width: 5.6 },
-  { label: "my work", href: "#work", left: 77.0, width: 6.9 },
-  { label: "journal", href: "#journal", left: 84.5, width: 7.3 },
-  { label: "say hi", href: "#contact", left: 92.2, width: 6.0 },
+  { label: "about", href: "/about", left: 70.8, width: 5.6 },
+  { label: "my work", href: "/work", left: 77.0, width: 6.9 },
+  { label: "journal", href: "/journal", left: 84.5, width: 7.3 },
+  { label: "say hi", href: "/contact", left: 92.2, width: 6.0 },
 ];
 
 const selectedWork = [
@@ -16,7 +16,7 @@ const selectedWork = [
     title: "Dynamic Factor Timing",
     description:
       "A walk-forward study of machine-learning factor allocation and an options-based risk overlay.",
-    href: "/research/qf206-factor-timing",
+    href: "/work/dynamic-factor-timing",
   },
   {
     number: "02",
@@ -24,15 +24,15 @@ const selectedWork = [
     title: "Where Is Alpha Truly Generated?",
     description:
       "Exploring investor behaviour, information frictions and the search for systematic alpha.",
-    href: "/research/alpha-generation",
+    href: "/work/behavioural-alpha",
   },
   {
     number: "03",
     type: "other things i've built",
-    title: "Projects & Experiments",
+    title: "Pixel Passport & Other Experiments",
     description:
-      "Little ideas, research tools and experiments I’ve been tinkering with.",
-    href: "/projects",
+      "A playful travel planner, trading experiments and things I’ve been making.",
+    href: "/work/pixel-passport",
   },
 ];
 
@@ -74,14 +74,14 @@ export default function Home() {
           </nav>
           <a
             className="artboard-spot"
-            href="#work"
+            href="/work"
             style={{ left: "5.3%", top: "55.8%", width: "17.6%", height: "8.0%" }}
           >
             <span className="artboard-sr-only">Explore my work</span>
           </a>
           <a
             className="artboard-spot"
-            href="#about"
+            href="/about"
             style={{ left: "7.0%", top: "65.0%", width: "14.8%", height: "5.3%" }}
           >
             <span className="artboard-sr-only">Get to know me</span>
@@ -95,10 +95,10 @@ export default function Home() {
               <summary>menu <span aria-hidden="true">＋</span></summary>
               <nav aria-label="Mobile navigation">
                 <a href="#top">home</a>
-                <a href="#about">about</a>
-                <a href="#work">my work</a>
-                <a href="#journal">journal</a>
-                <a href="#contact">say hi</a>
+                <a href="/about">about</a>
+                <a href="/work">my work</a>
+                <a href="/journal">journal</a>
+                <a href="/contact">say hi</a>
               </nav>
             </details>
           </header>
@@ -109,8 +109,8 @@ export default function Home() {
               markets, code, climbing &amp;<br /> collecting interesting experiences ♡
             </p>
             <div className="artboard-mobile-actions">
-              <a className="artboard-mobile-oval" href="#work">explore my work <span aria-hidden="true">→</span></a>
-              <a className="artboard-mobile-plain" href="#about">get to know me <span aria-hidden="true">→</span></a>
+              <a className="artboard-mobile-oval" href="/work">explore my work <span aria-hidden="true">→</span></a>
+              <a className="artboard-mobile-plain" href="/about">get to know me <span aria-hidden="true">→</span></a>
             </div>
           </div>
           <div className="artboard-mobile-collage">
@@ -176,7 +176,7 @@ export default function Home() {
             A place for everything worth remembering: questions I&apos;m exploring,
             market notes and occasional stories beyond my desk.
           </p>
-          <a href="/market-notes" className="artboard-text-link">browse my notes <span aria-hidden="true">↗</span></a>
+          <a href="/journal" className="artboard-text-link">browse my notes <span aria-hidden="true">↗</span></a>
         </div>
       </section>
 

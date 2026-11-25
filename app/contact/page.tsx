@@ -1,65 +1,11 @@
-import { GitBranch, Link2, Mail, MapPin } from "lucide-react";
-import { ButtonLink } from "@/components/button-link";
-import { PageHero } from "@/components/page-hero";
-import { profile } from "@/data/site";
+import type { Metadata } from "next";
+import { CreativeShell } from "@/components/creative-shell";
 
-export default function ContactPage() {
-  return (
-    <>
-      <PageHero
-        eyebrow="Contact"
-        title="Get in touch."
-        description="Reach out by email or through my LinkedIn profile for research conversations, investment analysis collaborations, data projects, or finance opportunities."
-      />
-      <section className="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
-        <div className="rounded-[28px] border border-[#111713]/10 bg-[#fffaf0] p-6 shadow-[0_16px_42px_rgba(24,59,43,0.08)]">
-          <h2 className="text-2xl font-semibold tracking-tight text-[#111713]">Contact details</h2>
-          <div className="mt-6 space-y-4">
-            <a
-              href={`mailto:${profile.email}`}
-              className="flex items-center gap-3 text-sm text-[#445046] transition hover:text-[#111713]"
-            >
-              <Mail size={18} />
-              {profile.email}
-            </a>
-            <a
-              href={profile.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-3 text-sm text-[#445046] transition hover:text-[#111713]"
-            >
-              <Link2 size={18} />
-              LinkedIn
-            </a>
-            <a
-              href={profile.github}
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-3 text-sm text-[#445046] transition hover:text-[#111713]"
-            >
-              <GitBranch size={18} />
-              GitHub
-            </a>
-            <p className="flex items-center gap-3 text-sm text-[#445046]">
-              <MapPin size={18} />
-              {profile.location}
-            </p>
-          </div>
-        </div>
-        <div className="rounded-[28px] border border-[#111713]/10 bg-[#183b2b] p-6 shadow-[0_20px_60px_rgba(24,59,43,0.18)] md:p-8">
-          <p className="text-xs uppercase tracking-[0.28em] text-[#c8ff5a]">Open to</p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[#f7f3e8]">
-            Investment research, systematic strategy, and AI finance conversations.
-          </h2>
-          <p className="mt-5 text-base leading-7 text-[#d8e4c9]">
-            Best reached by email or LinkedIn for investment research conversations,
-            internship opportunities, portfolio discussions, and finance or data projects.
-          </p>
-          <ButtonLink href={`mailto:${profile.email}`} external className="mt-8">
-            Email me
-          </ButtonLink>
-        </div>
-      </section>
-    </>
-  );
-}
+export const metadata: Metadata = { title: "Say Hi | Christi's Corner", description: "Get in touch with Christi about projects, research, climbing, travel or something interesting." };
+
+export default function ContactPage(){return <CreativeShell current="/contact">
+  <div className="cp-contact-hero"><p className="cp-kicker">GOT SOMETHING ON YOUR MIND? ✿</p><h1>come say<br/><em>hello!</em></h1><p>i'd love to hear about a project, an interesting investing question, a climbing recommendation — or just something you think i'd find cool.</p>
+    <div className="cp-contact-links"><a className="cp-contact-primary" href="mailto:christichia@gmail.com?subject=Hello%20from%20your%20website">send me an email ↗</a><a href="https://www.linkedin.com/in/christichia" target="_blank" rel="noopener noreferrer">find me on linkedin ↗</a><a href="https://github.com/christiiscool" target="_blank" rel="noopener noreferrer">peek at my github ↗</a></div>
+    <div className="cp-contact-envelope" aria-hidden="true"><div className="cp-envelope-stamp">✿</div><div className="cp-envelope-address">TO: SOMEONE CURIOUS<br/>FROM: CHRISTI ♡</div><b>WRITE SOON!</b></div>
+  </div>
+</CreativeShell>}

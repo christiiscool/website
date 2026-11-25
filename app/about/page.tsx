@@ -1,57 +1,23 @@
-import { PageHero } from "@/components/page-hero";
-import { SectionHeading } from "@/components/section-heading";
-import { highlights, profile, skillGroups } from "@/data/site";
+/* eslint-disable @next/next/no-img-element */
+import type { Metadata } from "next";
+import Link from "next/link";
+import { CreativeShell } from "@/components/creative-shell";
+
+export const metadata: Metadata = { title: "About | Christi's Corner", description: "Meet Christi: curious about markets and behaviour, usually climbing or dreaming up another project." };
 
 export default function AboutPage() {
-  return (
-    <>
-      <PageHero
-        eyebrow="About"
-        title="A research profile shaped by markets, behaviour, and data."
-        description={profile.bio}
-      />
-      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-        <SectionHeading
-          eyebrow="Personal thesis"
-          title="Better investment judgment comes from combining discipline with curiosity."
-          description="My background spans behavioural finance, quantitative investing, AI sentiment analysis, private equity, private credit, investment research, systematic trading, and Python data science projects."
-        />
-        <div className="grid gap-4 sm:grid-cols-2">
-          {highlights.map((item) => (
-            <div key={item.label} className="rounded-[26px] border border-[#111713]/10 bg-[#fffaf0] p-5 shadow-[0_14px_38px_rgba(24,59,43,0.07)]">
-              <item.icon size={22} className="text-[#183b2b]" />
-              <p className="mt-4 text-sm font-semibold text-[#111713]">{item.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-      <section className="border-t border-[#111713]/10 bg-[#d8e4c9]">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Working style"
-            title="I like research that can survive contact with messy reality."
-            description="The portfolio is structured to host rigorous notes, coded research, dashboard prototypes, investment memos, and market commentary in one coherent system."
-          />
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {skillGroups.map((group) => (
-              <div key={group.label} className="rounded-[26px] border border-[#111713]/10 bg-[#fffaf0] p-5">
-                <group.icon size={22} className="text-[#183b2b]" />
-                <h2 className="mt-5 font-semibold text-[#111713]">{group.label}</h2>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {group.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full border border-[#111713]/10 bg-[#edf3dc] px-2.5 py-1 text-xs text-[#344238]"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
-  );
+  return <CreativeShell current="/about">
+    <div className="cp-about-hero">
+      <div className="cp-about-title"><p className="cp-kicker">HELLO, INTERNET ♡</p><h1>a little<br/><em>about me.</em></h1><p>hi! i'm christi — curious about markets, people, places and how things work. i like a good spreadsheet, a good climb and an even better detour.</p><span className="cp-hand-star" aria-hidden="true">✳</span></div>
+      <div className="cp-about-photos">
+        <div className="cp-photo cp-photo--red"><img src="/art/photo-red.webp" alt="Christi in a red cardigan outside a colourful flower shop"/><span>caught in the wild ✿</span></div>
+        <div className="cp-photo cp-photo--paris"><img src="/art/photo-paris.webp" alt="Christi visiting Paris"/><span>postcards from paris ♡</span></div>
+        <div className="cp-about-doodle" aria-hidden="true">♡<small>little<br/>moments</small></div>
+      </div>
+    </div>
+    <section className="cp-about-story"><div className="cp-story-label">01 / THE SHORT VERSION</div><div><h2>somewhere between<br/><em>curious &amp; caffeinated.</em></h2><p>I'm studying Behavioural Finance and Asset Management at Singapore Management University. The questions that stick with me are usually about how people make decisions, why markets behave the way they do, and whether an interesting idea can be tested instead of just talked about.</p><p>My work has taken me through finance and investing teams, research projects and quite a few lines of Python. This corner of the internet is where I keep the parts I can share publicly, along with everything else I'm curious about.</p></div></section>
+    <section className="cp-about-life"><div className="cp-story-label">02 / OUTSIDE THE SPREADSHEETS</div><div className="cp-life-items"><article><span>01 ✳</span><h3>up a climbing wall</h3><p>Usually trying one more move, or convincing myself a sloper is actually holdable.</p></article><article><span>02 ✿</span><h3>somewhere new</h3><p>Travelling, collecting little memories and finding excuses to take too many photos.</p></article><article><span>03 ♡</span><h3>building something</h3><p>Interactive planners, research tools, small experiments — anything that makes an idea feel real.</p></article></div></section>
+    <section className="cp-about-timeline"><div className="cp-story-label">03 / A FEW CHAPTERS</div><div><h2>the winding road <em>so far.</em></h2><div className="cp-timeline-list"><div><time>2026</time><p><strong>Ontario Teachers' Pension Plan</strong><br/>Private Capital internship, with a focus on investment analysis and research.</p></div><div><time>2025</time><p><strong>Blackstone &amp; Alta Exchange</strong><br/>Experience across finance analytics, private markets and investment workflows.</p></div><div><time>2024 — now</time><p><strong>Singapore Management University</strong><br/>Behavioural finance, asset management and research through a student-managed fund.</p></div></div></div></section>
+    <section className="cp-about-cta"><p>enough about me. what have <em>you</em> been working on?</p><Link href="/contact">let's talk ↗</Link></section>
+  </CreativeShell>;
 }
