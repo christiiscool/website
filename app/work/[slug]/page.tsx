@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { CreativeShell } from "@/components/creative-shell";
 import { CreativeProjectArt } from "@/components/creative-project-art";
 import { DynamicFactorReport } from "@/components/dynamic-factor-report";
+import { DellResearchReport } from "@/components/dell-research-report";
 import { creativeProjects, getCreativeProject } from "@/data/creative-projects";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -19,6 +20,9 @@ export default async function WorkDetailPage({params}: Props) {
   if (!project) notFound();
   if (project.slug === "dynamic-factor-timing") {
     return <CreativeShell current="/work"><DynamicFactorReport /></CreativeShell>;
+  }
+  if (project.slug === "dell-equity-thesis") {
+    return <CreativeShell current="/work"><DellResearchReport /></CreativeShell>;
   }
   const nextProject = creativeProjects[(creativeProjects.findIndex((item) => item.slug === project.slug) + 1) % creativeProjects.length];
   return <CreativeShell current="/work">

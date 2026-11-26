@@ -1,0 +1,284 @@
+/* Christi's Corner: Dell equity thesis, 2025 archival research edition. */
+.dell-report {
+  --dell-blue: #1037bf;
+  --dell-pink: #e5a2b8;
+  --dell-ink: #292636;
+  --dell-muted: #615966;
+  --dell-rule: #e6d6d9;
+  --dell-paper: #fcf7f3;
+  background: var(--dell-paper);
+  color: var(--dell-ink);
+  min-width: 0;
+}
+.dell-report *, .dell-report *::before, .dell-report *::after { box-sizing: border-box; }
+.dell-report a { text-decoration: none; }
+.dell-report a:focus-visible, .dell-report button:focus-visible { outline: 3px solid #ee81aa; outline-offset: 4px; }
+.dell-report-utility { max-width: 1450px; margin: 0 auto; padding: 23px clamp(22px, 5vw, 80px); display: flex; justify-content: space-between; gap: 20px; align-items: center; font-size: 11px; letter-spacing: .13em; border-bottom: 1px solid var(--dell-rule); }
+.dell-report-utility a { color: var(--dell-blue); font-size: 13px; letter-spacing: .02em; font-weight: 700; }
+.dell-report-utility span { color: #956f83; font-weight: 700; }
+.dell-report-hero { max-width: 1450px; min-height: 645px; margin: 0 auto; padding: 85px clamp(22px, 5vw, 80px) 36px; display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); gap: 0; position: relative; }
+.dell-report-hero-copy { position: relative; z-index: 2; padding-top: 36px; }
+.dell-kicker { color: #9e6483; font-size: 12px; letter-spacing: .16em; font-weight: 800; margin: 0 0 20px; }
+.dell-kicker span { margin: 0 11px; color: var(--dell-blue); font-size: 16px; }
+.dell-report-hero h1 { color: var(--dell-blue); font: italic 700 clamp(76px, 8.3vw, 132px)/.86 Georgia, 'Times New Roman', serif; letter-spacing: -.09em; margin: 0 0 36px; white-space: nowrap; }
+.dell-report-hero h1 em { font-weight: 400; padding-left: .14em; }
+.dell-report-dek { font-size: clamp(18px, 1.5vw, 22px); line-height: 1.63; max-width: 600px; margin: 0 0 18px; color: #332b40; }
+.dell-report-subdek { font-size: 14px; line-height: 1.7; max-width: 560px; margin: 0; color: #6b5c69; }
+.dell-hero-jump { display: inline-flex; align-items: center; gap: 40px; border: 1.5px solid var(--dell-blue); color: var(--dell-blue); padding: 15px 22px; border-radius: 50% 46% 48% 45% / 44% 50% 49% 44%; margin-top: 30px; font-size: 15px; letter-spacing: .02em; transform: rotate(-2deg); transition: transform .2s, background .2s; }
+.dell-hero-jump:hover { transform: rotate(0) translateY(-3px); background: #fae4ec; }
+.dell-report-hero-art { min-width: 0; position: relative; display: grid; place-items: center; margin: -60px -60px -60px -25px; }
+.dell-server-art { width: 100%; max-width: 710px; height: auto; }
+.dell-hero-stamp { position: absolute; right: 14%; bottom: 11%; color: #ae426b; border: 3px double #d36e95; border-radius: 50%; width: 108px; height: 108px; display: flex; flex-direction: column; justify-content: center; text-align: center; font: italic bold 35px Georgia, serif; transform: rotate(11deg); background: rgba(255, 245, 246, .86); box-shadow: 4px 9px 0 #c98ba228; }
+.dell-hero-stamp span { font: bold 10px Arial, sans-serif; letter-spacing: .08em; }
+.dell-metrics { max-width: 1330px; margin: 14px auto 0; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); border-block: 1px solid #d8c4cc; padding: 20px 0; }
+.dell-metrics > div { padding: 22px 26px 27px; border-right: 1px solid #d8c4cc; min-width: 0; }
+.dell-metrics > div:last-child { border: 0; }
+.dell-metrics span, .dell-metrics small { display: block; color: #956c82; font-size: 10px; font-weight: 700; letter-spacing: .15em; }
+.dell-metrics strong { display: block; color: var(--dell-blue); font: italic bold clamp(30px, 3.45vw, 49px)/1.1 Georgia,serif; letter-spacing: -.055em; margin: 13px 0 7px; }
+.dell-metrics small { color: #837782; letter-spacing: 0; font-size: 12px; font-weight: 400; }
+.dell-metric-rating strong { color: #b34b77; }
+.dell-metric-rating i { font: 23px Arial, sans-serif; color: #e3a0b5; }
+.dell-report-body { max-width: 1450px; margin: auto; padding: 0 clamp(22px, 5vw, 80px) 80px; display: grid; grid-template-columns: 230px minmax(0, 1fr); column-gap: clamp(38px, 6vw, 95px); }
+.dell-toc { position: relative; padding-top: 101px; min-width: 0; }
+.dell-toc > p { font-size: 10px; font-weight: 800; letter-spacing: .16em; color: #9a6d85; margin: 0 0 28px; }
+.dell-toc nav { position: sticky; top: 32px; display: grid; gap: 8px; border-left: 1px solid #dfbccc; }
+.dell-toc nav a { font-size: 13px; color: #655c68; display: flex; gap: 15px; align-items: start; padding: 7px 0 7px 16px; line-height: 1.5; }
+.dell-toc nav a:hover { color: var(--dell-blue); background: #f9e8ed; }
+.dell-toc nav span { font: 11px Georgia, serif; color: #c18ba4; padding-top: 1px; }
+.dell-toc-note { margin-top: 80px; padding: 25px 12px 25px 10px; background: #f8e3ea; transform: rotate(-4deg); text-align: center; border: 1px solid #e5bac8; box-shadow: 5px 8px 0 #ecd6d6; }
+.dell-toc-note span { display: block; font-size: 42px; line-height: 1; color: #e092ae; }
+.dell-toc-note p { color: var(--dell-blue); font: italic 20px/1.25 Georgia, serif; margin: 15px 0 0; }
+.dell-story { min-width: 0; max-width: 1020px; }
+.dell-chapter { scroll-margin-top: 25px; padding: 105px 0 95px; border-bottom: 1px solid var(--dell-rule); }
+.dell-chapter-header { margin: 0 0 40px; }
+.dell-chapter-index { display: block; font-size: 11px; color: #b26f91; font-weight: 800; letter-spacing: .17em; margin-bottom: 24px; }
+.dell-chapter h2 { font: italic 600 clamp(47px, 4.9vw, 73px)/1.07 Georgia,'Times New Roman',serif; letter-spacing: -.065em; color: var(--dell-blue); margin: 0 0 24px; max-width: 870px; }
+.dell-chapter-header > p { font-size: 19px; line-height: 1.6; color: #6a5868; max-width: 740px; margin: 0; }
+.dell-chapter > p { font-size: 17px; line-height: 1.82; color: #423e4b; max-width: 780px; margin: 0 0 24px; }
+.dell-chapter strong { color: #25223e; }
+.dell-variant-visual { margin: 47px 0 42px; display: grid; grid-template-columns: minmax(0,1fr) 72px minmax(0,1fr); gap: 2px; align-items: center; }
+.dell-variant-visual > div { min-height: 240px; padding: 33px 28px; border: 1px solid #d9cfda; background: #f6f2ef; transform: rotate(-1.2deg); display: flex; flex-direction: column; }
+.dell-variant-visual > div:last-child { background: #e4e8fc; border-color: #bbc7ea; transform: rotate(1.2deg); }
+.dell-variant-visual small { font-size: 11px; font-weight: 800; letter-spacing: .12em; color: #a4718c; }
+.dell-variant-visual > div:last-child small { color: var(--dell-blue); }
+.dell-variant-visual strong { font: italic 600 clamp(24px,3.1vw,42px)/1.1 Georgia,serif; letter-spacing: -.04em; margin: 22px 0 21px; }
+.dell-variant-visual strong em { font-weight: 400; }
+.dell-variant-visual > div:last-child strong { color: var(--dell-blue); }
+.dell-variant-visual div > span { font-size: 12px; line-height: 1.45; color: #816e80; margin-top: auto; }
+.dell-variant-curve { font: italic bold 73px Georgia,serif; text-align: center; color: #e29cb5; position: relative; z-index: 2; }
+.dell-stack-diagram { display: grid; grid-template-columns: minmax(0,1fr) 30px minmax(0,1.12fr) 30px minmax(0,.9fr); gap: 9px; align-items: center; background: #fffaf6; padding: 30px 26px; margin: 40px 0 24px; border: 1px solid #e8d9d9; box-shadow: 5px 6px 0 #f2e8e5; }
+.dell-diagram-small { font-size: 10px; letter-spacing: .15em; font-weight: 800; color: #a06c89; margin: 0 0 20px; }
+.dell-stack-needs, .dell-stack-layers { min-width: 0; }
+.dell-stack-need { border-bottom: 1px solid #eadcdd; color: #423945; font-size: 14px; padding: 13px 4px 13px 1px; display: flex; gap: 12px; align-items: center; }
+.dell-stack-need span { color: #c283a0; font: italic 18px Georgia,serif; }
+.dell-stack-join { text-align: center; font-size: 30px; color: var(--dell-blue); }
+.dell-stack-layer { display: flex; align-items: center; gap: 13px; padding: 10px 12px; border: 1px solid #aebbe7; background: #eef1ff; margin-bottom: 6px; min-width: 0; }
+.dell-layer-icon { display: inline-grid; place-items: center; flex: 0 0 32px; height: 32px; border: 1px solid #96a7e7; background: #fff; color: var(--dell-blue); font-size: 20px; }
+.dell-stack-layer strong { font-size: 14px; display: block; color: #263a9b; margin-bottom: 2px; }
+.dell-stack-layer small { display: block; color: #656683; font-size: 11px; line-height: 1.4; }
+.dell-stack-outcome { background: #f9e4ed; padding: 26px 13px; border: 1px solid #e4bccb; text-align: center; min-height: 205px; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+.dell-stack-outcome .dell-outcome-star { color: #ca6a92; font-size: 46px; margin-bottom: 12px; }
+.dell-stack-outcome strong { font: italic 25px/1.15 Georgia,serif; color: var(--dell-blue); }
+.dell-stack-outcome small { display: block; font-size: 11px; line-height: 1.5; color: #8a7180; max-width: 140px; margin-top: 13px; }
+.dell-note-line { font: italic 16px/1.6 Georgia,serif; color: #9c6b87; margin: 28px 0 42px; max-width: 750px; }
+.dell-note-line span { font-size: 30px; vertical-align: middle; margin-right: 10px; }
+.dell-two-col-copy { display: grid; grid-template-columns: 1fr 1fr; gap: 38px; }
+.dell-two-col-copy p { font-size: 15px; line-height: 1.75; color: #5c5360; margin: 0; }
+.dell-explorer { border: 1px solid #d9cbd1; background: #fffaf7; box-shadow: 6px 8px 0 #ead9de; margin: 48px 0; }
+.dell-explorer-tabs { display: grid; grid-template-columns: repeat(3,1fr); border-bottom: 1px solid #ddcbd2; }
+.dell-explorer-tab { background: #fff9f7; border: 0; border-right: 1px solid #e2d1d8; cursor: pointer; min-width: 0; display: flex; flex-direction: column; gap: 9px; padding: 23px 18px; text-align: left; color: #5d5266; transition: background .2s; }
+.dell-explorer-tab:last-child { border-right: 0; }
+.dell-explorer-tab:hover { background: #fbe5ec; }
+.dell-explorer-tab.is-active { background: #173ac0; color: white; }
+.dell-explorer-tab span { font: italic 19px Georgia,serif; color: #b57e9b; }
+.dell-explorer-tab.is-active span { color: #f4c7d5; }
+.dell-explorer-tab strong { font: italic 29px/1.1 Georgia,serif; color: inherit; }
+.dell-explorer-tab small { font-size: 12px; line-height: 1.35; opacity: .76; }
+.dell-explorer-detail { padding: 35px clamp(20px,3vw,43px) 43px; }
+.dell-explorer-summary { position: relative; padding-right: 63px; }
+.dell-small-label { font-size: 10px; letter-spacing: .15em; font-weight: 800; color: #ae7592; }
+.dell-explorer-symbol { position: absolute; top: -13px; right: 4px; font-size: 52px; color: #e7a5be; }
+.dell-explorer-summary h3 { font: italic 600 clamp(36px,4vw,55px)/1 Georgia,serif; letter-spacing: -.045em; color: var(--dell-blue); margin: 16px 0; }
+.dell-explorer-summary > p:last-child { font-size: 17px; line-height: 1.65; max-width: 760px; margin: 0 0 28px; }
+.dell-explorer-variant { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 28px 0 32px; }
+.dell-explorer-contrast { background: #f1ecea; padding: 22px; }
+.dell-explorer-contrast-ours { background: #e9edff; }
+.dell-explorer-contrast small { font-size: 10px; letter-spacing: .13em; font-weight: 800; color: #8b6d7e; }
+.dell-explorer-contrast-ours small { color: var(--dell-blue); }
+.dell-explorer-contrast p { font: italic 18px/1.48 Georgia,serif; margin: 11px 0 0; color: #3f3546; }
+.dell-explorer-checks { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.dell-explorer-checks h4 { font-size: 14px; margin: 0 0 13px; color: #42364b; }
+.dell-explorer-checks h4 span { color: #bc6b94; font-size: 18px; padding-right: 7px; }
+.dell-explorer-checks ul { list-style: none; padding: 0; margin: 0; }
+.dell-explorer-checks li { font-size: 13px; padding: 10px 0; border-bottom: 1px solid #eadde0; line-height: 1.55; color: #655967; }
+.dell-explorer-checks li::before { content: "↳"; color: #c1779a; padding-right: 8px; }
+.dell-caveat-banner { margin-top: 25px; background: #f9e5eb; border-left: 3px solid #c66c90; display: flex; gap: 16px; padding: 23px 27px; }
+.dell-caveat-banner span { color: #c77292; font-size: 32px; line-height: 1; }
+.dell-caveat-banner p { margin: 0; font-size: 15px; line-height: 1.7; color: #635262; }
+.dell-revenue-grid { margin: 43px 0 41px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.dell-revenue-track { padding: 27px 22px; border: 1px solid #decbd2; min-width: 0; }
+.dell-isg-track { background: #f0f1ff; border-color: #bfc9ed; }
+.dell-csg-track { background: #fce9ee; border-color: #e6c4d0; }
+.dell-track-heading { margin-bottom: 24px; }
+.dell-track-heading span { color: #8c7292; font-size: 11px; font-weight: 800; letter-spacing: .16em; }
+.dell-track-heading strong { display: block; color: #173ac0; font: italic 32px Georgia,serif; letter-spacing: -.04em; margin: 10px 0 5px; }
+.dell-track-heading em { font: italic 14px Georgia,serif; color: #986b86; }
+.dell-track-two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.dell-model-node { background: #fffdfb; padding: 18px 13px; border: 1px solid #ded4da; min-width: 0; min-height: 150px; }
+.dell-model-node small,.dell-model-result small { display: block; text-transform: uppercase; font-size: 10px; letter-spacing: .1em; color: #b47b93; margin-bottom: 10px; }
+.dell-model-node strong, .dell-model-result strong { display: block; font: italic 20px/1.18 Georgia,serif; color: #27338b; margin-bottom: 10px; }
+.dell-model-node span,.dell-model-result span { display: block; font-size: 12px; color: #766b75; line-height: 1.5; }
+.dell-model-connector { text-align: center; font-size: 27px; color: #a887a0; height: 45px; line-height: 45px; }
+.dell-model-result { padding: 20px 16px; background: #173ac0; color: white; }
+.dell-model-result strong { color: white; font-size: 22px; }
+.dell-model-result small,.dell-model-result span { color: #c7d4ff; }
+.dell-region-top { min-height: 145px; }
+.dell-regions { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 6px; }
+.dell-regions span { background: #fffaf7; padding: 12px 5px; font-size: 11px; text-align: center; border: 1px solid #dcbccb; color: #714f69; }
+.dell-revenue-bottom { grid-column: 1 / -1; background: #fffdf9; padding: 20px 12px; border: 1px solid #e6d7d6; display: grid; grid-template-columns: minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr); gap: 4px; align-items: center; }
+.dell-revenue-bottom div { text-align: center; min-width: 0; }
+.dell-revenue-bottom strong { display: block; font: italic 19px Georgia,serif; color: var(--dell-blue); }
+.dell-revenue-bottom small { display: block; font-size: 11px; color: #82727b; line-height: 1.55; margin-top: 6px; }
+.dell-revenue-bottom > span { color: #d78ba5; font-size: 28px; text-align: center; }
+.dell-method-footnote { margin: 36px 0 0; padding: 18px 23px; border-left: 3px solid #d6a0b4; background: #fbf1f3; font-size: 13px; line-height: 1.8; color: #75616f; }
+.dell-price-figure { margin: 44px 0 34px; padding: 32px 38px; border: 1px solid #d8d0df; background: #eeeffd; }
+.dell-price-axis { height: 220px; display: grid; grid-template-columns: minmax(100px,1fr) minmax(150px,2fr) minmax(100px,1fr); align-items: center; position: relative; gap: 0; }
+.dell-price-axis-guide { position: absolute; height: 2px; top: 50%; left: 14%; right: 14%; background: #aab3e0; }
+.dell-price-marker { height: 136px; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 2; gap: 10px; }
+.dell-marker-dot { display: none; }
+.dell-price-marker small { color: #8d6684; font-size: 10px; font-weight: 800; letter-spacing: .13em; }
+.dell-price-marker strong { font: italic bold clamp(27px,3vw,42px) Georgia,serif; color: #44446f; white-space: nowrap; }
+.dell-price-marker-pt strong { color: var(--dell-blue); }
+.dell-price-progress { height: 25px; border-radius: 0; background: repeating-linear-gradient(135deg, #edc1d3 0px, #edc1d3 7px, #fae1e8 7px, #fae1e8 14px); z-index: 3; position: relative; }
+.dell-price-progress::before,.dell-price-progress::after { content: ""; position: absolute; left: 0; top: -6px; bottom: -6px; width: 3px; background: #d482a1; }
+.dell-price-progress::after { left: auto; right: 0; background: var(--dell-blue); }
+.dell-price-progress > span { position: absolute; top: -48px; left: 50%; transform: translateX(-50%) rotate(-4deg); font: italic bold 28px Georgia,serif; color: var(--dell-blue); background: #fffaf5; border: 1px solid #d7c5d1; padding: 8px 16px; white-space: nowrap; }
+.dell-price-figure figcaption { font-size: 12px; color: #72708c; text-align: center; line-height: 1.6; max-width: 700px; margin: 0 auto; }
+.dell-valuation-anchors { margin: 25px 0 30px; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.dell-valuation-anchors > div { background: #fffaf7; border: 1px solid #e6d7d9; padding: 26px 20px; }
+.dell-valuation-anchors span { font: italic bold clamp(27px,3vw,42px)/1.1 Georgia,serif; letter-spacing: -.04em; display: block; color: var(--dell-blue); }
+.dell-valuation-anchors strong { display: block; font-size: 11px; letter-spacing: .1em; margin: 15px 0 10px; color: #a16c88; }
+.dell-valuation-anchors p { font-size: 13px; line-height: 1.65; margin: 0; color: #716372; }
+.dell-valuation-method { padding: 24px 21px; background: #f8e7ec; margin: 31px 0 33px; display: grid; grid-template-columns: minmax(0,1fr) 22px minmax(0,1fr) 22px minmax(0,1fr); gap: 8px; align-items: center; }
+.dell-valuation-stage { min-width: 0; }
+.dell-valuation-stage span { display: block; font-size: 10px; letter-spacing: .12em; color: #a76583; font-weight: 800; }
+.dell-valuation-stage strong { display: block; font: italic 21px Georgia,serif; margin: 12px 0; color: var(--dell-blue); }
+.dell-valuation-stage p { font-size: 12px; line-height: 1.6; color: #7c6272; margin: 0; }
+.dell-valuation-arrow { color: #ba6d8a; font-size: 28px; }
+.dell-risk-table { border-top: 2px solid #a8acdb; margin: 35px 0 43px; }
+.dell-risk-row { display: grid; grid-template-columns: 1fr 1.4fr 1.4fr; gap: 18px; padding: 24px 14px; border-bottom: 1px solid #dfd2d8; font-size: 14px; line-height: 1.55; color: #554957; }
+.dell-risk-row:nth-child(even) { background: #fff9f7; }
+.dell-risk-head { background: #ecebfa!important; font-size: 10px; font-weight: 800; letter-spacing: .11em; color: #3745a5; padding: 15px 14px; }
+.dell-risk-row strong { font-size: 14px; color: #312c44; }
+.dell-risk-num { display: block; font: italic 16px Georgia,serif; color: #b7849d; margin-bottom: 5px; }
+.dell-final-thought { display: grid; grid-template-columns: 80px 1fr; gap: 14px; background: #173ac0; color: #fff; padding: 42px 37px 45px; align-items: start; }
+.dell-final-thought > span { font-size: 64px; line-height: 1; color: #f4bcd2; }
+.dell-final-thought small { font-size: 10px; font-weight: 800; color: #bfcaff; letter-spacing: .15em; }
+.dell-final-thought h3 { font: italic 500 clamp(28px,3.5vw,42px)/1.16 Georgia,serif; color: #fff; letter-spacing: -.04em; max-width: 660px; margin: 13px 0 20px; }
+.dell-final-thought h3 em { color: #ffd2df; }
+.dell-final-thought p { font-size: 15px; line-height: 1.7; color: #dbe1ff; margin: 0; max-width: 630px; }
+.dell-article-footer { padding: 53px 0 60px; display: flex; justify-content: space-between; gap: 35px; align-items: center; }
+.dell-article-footer > div { max-width: 640px; }
+.dell-article-footer strong { display: block; font-size: 11px; letter-spacing: .16em; color: #916f84; }
+.dell-article-footer p { color: #766a76; line-height: 1.7; font-size: 12px; margin: 9px 0; }
+.dell-back-button { white-space: nowrap; font-size: 14px; color: var(--dell-blue); font-weight: 700; border-bottom: 2px solid #eab1c1; padding-bottom: 7px; }
+@media (max-width: 1170px) {
+  .dell-report-hero { min-height: 540px; padding-top: 65px; }
+  .dell-report-hero h1 { font-size: clamp(75px,8.4vw,105px); }
+  .dell-report-hero-art { margin: -25px -48px -20px -40px; }
+  .dell-report-body { grid-template-columns: 175px minmax(0,1fr); gap: 37px; }
+  .dell-stack-diagram { grid-template-columns: minmax(0,1fr) 20px minmax(0,1fr); }
+  .dell-stack-join:nth-of-type(4), .dell-stack-outcome { display: none; }
+}
+@media (max-width: 900px) {
+  .dell-report-hero { grid-template-columns: 1fr; padding: 55px 28px 15px; }
+  .dell-report-hero-copy { padding-top: 0; }
+  .dell-report-hero h1 { font-size: clamp(75px, 13vw, 120px); }
+  .dell-report-hero-art { max-width: 660px; margin: -10px auto -15px; }
+  .dell-hero-stamp { right: 11%; bottom: 16%; }
+  .dell-metrics { margin: 0 22px; }
+  .dell-metrics > div { padding: 18px 13px; }
+  .dell-report-body { grid-template-columns: 1fr; padding: 0 30px 50px; }
+  .dell-toc { padding: 35px 0 0; }
+  .dell-toc nav { position: static; grid-template-columns: repeat(3,minmax(0,1fr)); border: 0; gap: 0; }
+  .dell-toc nav a { border-bottom: 1px solid var(--dell-rule); padding: 12px 0; }
+  .dell-toc-note { display: none; }
+  .dell-chapter { padding: 75px 0; }
+  .dell-chapter h2 { font-size: clamp(48px, 8vw, 72px); }
+  .dell-stack-diagram { grid-template-columns: minmax(0,1fr) 30px minmax(0,1.1fr) 30px minmax(0,.85fr); }
+  .dell-stack-join:nth-of-type(4), .dell-stack-outcome { display: flex; }
+}
+@media (max-width: 700px) {
+  .dell-report-utility { padding: 16px 19px; }
+  .dell-report-utility span { display: none; }
+  .dell-report-hero { padding: 50px 20px 0; }
+  .dell-kicker { font-size: 10px; }
+  .dell-report-hero h1 { font-size: clamp(66px, 15.3vw, 100px); line-height: .9; margin-bottom: 26px; }
+  .dell-report-dek { font-size: 18px; }
+  .dell-report-subdek { font-size: 13px; }
+  .dell-hero-jump { margin-top: 23px; }
+  .dell-report-hero-art { margin: -3px -20px -4px; }
+  .dell-hero-stamp { width: 80px; height: 80px; font-size: 27px; border-width: 2px; right: 13%; bottom: 13%; }
+  .dell-hero-stamp span { font-size: 8px; }
+  .dell-metrics { margin: 10px 15px 0; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .dell-metrics > div { padding: 20px 15px; border-right: 1px solid #d8c4cc; border-bottom: 1px solid #d8c4cc; }
+  .dell-metrics > div:nth-child(even) { border-right: none; }
+  .dell-metrics > div:nth-last-child(-n+2) { border-bottom: none; }
+  .dell-metrics strong { font-size: 34px; }
+  .dell-report-body { padding: 0 20px 48px; }
+  .dell-toc nav { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .dell-toc nav a { font-size: 12px; gap: 9px; padding: 10px 5px; }
+  .dell-chapter { padding: 62px 0 65px; }
+  .dell-chapter-header { margin-bottom: 30px; }
+  .dell-chapter h2 { font-size: clamp(43px, 10vw, 60px); }
+  .dell-chapter-header > p { font-size: 16px; }
+  .dell-chapter > p { font-size: 16px; line-height: 1.76; }
+  .dell-variant-visual { grid-template-columns: 1fr; gap: 0; }
+  .dell-variant-visual > div { min-height: 175px; padding: 26px; transform: none; }
+  .dell-variant-visual > div:last-child { transform: none; }
+  .dell-variant-curve { font-size: 39px; line-height: 1; transform: rotate(90deg); }
+  .dell-variant-visual strong { font-size: 32px; margin: 15px 0; }
+  .dell-stack-diagram { grid-template-columns: 1fr; padding: 20px 18px; gap: 7px; }
+  .dell-stack-join { font-size: 27px; height: 32px; align-items: center; justify-content: center; transform: rotate(90deg); }
+  .dell-stack-layers { display: block; }
+  .dell-stack-join:nth-of-type(4), .dell-stack-outcome { display: flex; }
+  .dell-stack-outcome { min-height: 130px; padding: 17px; }
+  .dell-stack-outcome small { max-width: 260px; }
+  .dell-two-col-copy { grid-template-columns: 1fr; gap: 18px; }
+  .dell-explorer-tabs { grid-template-columns: 1fr; }
+  .dell-explorer-tab { padding: 12px 18px; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 12px; border-right: 0; border-bottom: 1px solid #e2d1d8; }
+  .dell-explorer-tab strong { font-size: 24px; }
+  .dell-explorer-tab small { width: 100%; padding-left: 32px; }
+  .dell-explorer-detail { padding: 24px 19px; }
+  .dell-explorer-summary { padding-right: 40px; }
+  .dell-explorer-summary h3 { font-size: 40px; }
+  .dell-explorer-variant,.dell-explorer-checks { grid-template-columns: 1fr; gap: 15px; }
+  .dell-explorer-checks { gap: 24px; }
+  .dell-revenue-grid { grid-template-columns: 1fr; }
+  .dell-revenue-bottom { grid-column: auto; padding: 20px 12px; }
+  .dell-revenue-bottom strong { font-size: 15px; }
+  .dell-revenue-bottom small { font-size: 10px; }
+  .dell-track-heading strong { font-size: 30px; }
+  .dell-price-figure { padding: 40px 14px 24px; }
+  .dell-price-axis { grid-template-columns: minmax(90px,1fr) minmax(100px,1fr) minmax(90px,1fr); height: 175px; }
+  .dell-price-marker strong { font-size: 25px; }
+  .dell-price-marker small { font-size: 9px; text-align: center; }
+  .dell-price-progress > span { font-size: 21px; }
+  .dell-valuation-anchors { grid-template-columns: 1fr; }
+  .dell-valuation-anchors > div { padding: 20px; }
+  .dell-valuation-method { grid-template-columns: 1fr; gap: 5px; }
+  .dell-valuation-arrow { transform: rotate(90deg); text-align: center; font-size: 25px; }
+  .dell-valuation-stage { padding: 12px; }
+  .dell-risk-row { grid-template-columns: 1fr; gap: 7px; padding: 20px 11px; }
+  .dell-risk-head { display: none; }
+  .dell-risk-row > div:nth-child(2)::before { content: "SUPPORTIVE: "; font-weight: 800; font-size: 11px; color: var(--dell-blue); }
+  .dell-risk-row > div:nth-child(3)::before { content: "WATCH OUT: "; font-weight: 800; font-size: 11px; color: #c16a8d; }
+  .dell-final-thought { grid-template-columns: 1fr; padding: 26px 23px; }
+  .dell-final-thought > span { font-size: 40px; }
+  .dell-final-thought h3 { font-size: 32px; }
+  .dell-article-footer { display: block; }
+  .dell-back-button { display: inline-block; margin-top: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dell-report a, .dell-report button { transition: none!important; }
+}
