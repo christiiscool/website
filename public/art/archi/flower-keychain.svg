@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 275">
+<defs><radialGradient id="petal" cx=".3" cy=".28" r=".9"><stop stop-color="#edf8ff" stop-opacity=".98"/><stop offset=".42" stop-color="#c5e4f5" stop-opacity=".92"/><stop offset=".75" stop-color="#6bafdb" stop-opacity=".88"/><stop offset="1" stop-color="#eafaff" stop-opacity=".97"/></radialGradient><linearGradient id="steel"><stop stop-color="#586773"/><stop offset=".48" stop-color="#f9feff"/><stop offset="1" stop-color="#89939a"/></linearGradient></defs>
+<path d="M120 63 C63 10 28 79 68 120 C7 153 71 211 120 184 C146 244 218 199 192 151 C249 122 216 50 156 71 C150 31 129 34 120 63Z" fill="url(#petal)" stroke="#8ea7b3" stroke-width="6" stroke-linejoin="round"/>
+<circle cx="135" cy="137" r="34" fill="#caedf8" stroke="#8fbed6" stroke-width="5"/><circle cx="135" cy="137" r="13" fill="#8cabc6"/><ellipse cx="97" cy="82" rx="17" ry="9" fill="#fff" opacity=".48" transform="rotate(-25 97 82)"/>
+<path d="M148 127 224 38" stroke="#485c69" stroke-width="15" stroke-linecap="round"/><path d="M150 127 225 40" stroke="url(#steel)" stroke-width="9" stroke-linecap="round"/>
+<circle cx="232" cy="29" r="16" fill="none" stroke="url(#steel)" stroke-width="9"/>
+</svg>

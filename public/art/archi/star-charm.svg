@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 235">
+<defs><linearGradient id="metal" x1=".16" x2=".86" y1="0" y2="1"><stop stop-color="#fcffff"/><stop offset=".20" stop-color="#d8e7f0"/><stop offset=".37" stop-color="#aab9c9"/><stop offset=".55" stop-color="#edfaff"/><stop offset=".77" stop-color="#799abc"/><stop offset="1" stop-color="#f9ffff"/></linearGradient><filter id="sh"><feGaussianBlur stdDeviation="3"/></filter></defs>
+<path d="M120 11 145 81 218 88 161 133 181 211 119 169 52 210 73 135 16 86 90 81Z" fill="#142c50" opacity=".24" transform="translate(3 6)" filter="url(#sh)"/>
+<path d="M120 11 145 81 218 88 161 133 181 211 119 169 52 210 73 135 16 86 90 81Z" fill="url(#metal)" stroke="#748da6" stroke-width="4" stroke-linejoin="round"/>
+<path d="M120 39 138 95 192 100 148 132 162 185 119 154 70 183 86 130 42 99 97 95Z" fill="#e3f0f5" stroke="#fafcff" stroke-width="3"/>
+<path d="M120 39 119 154 162 185 148 132 192 100 138 95Z" fill="#b3c7d9" opacity=".6"/>
+<circle cx="120" cy="20" r="5" fill="#fff" stroke="#9fb1c1" stroke-width="3"/>
+</svg>
