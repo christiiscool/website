@@ -145,25 +145,25 @@ export const creativeProjects: CreativeProject[] = [
   {
     slug: "dell-equity-thesis",
     number: "06",
-    title: "Dell Equity Thesis",
-    short: "A 2025 BUY thesis: Dell as an integrated AI infrastructure provider, not simply a cyclical hardware maker.",
-    eyebrow: "the fundamental one ✶",
+    title: "The Real Dell",
+    short: "A 2025 BUY thesis on the direct model, tariff resilience and the commercial PC replacement cycle—with the original financial model.",
+    eyebrow: "the original pitch ✶",
     category: "markets",
     categoryLabel: "markets & research",
-    kind: "Equity research",
+    kind: "Equity research / historical case study",
     year: "2025",
     visual: "dell",
-    intro: "An archival 2025 BUY pitch with a $115.60 target and approximately 20.9% implied upside from a historical $95.60 reference price, focused on enterprise AI integration, direct-customer economics and the PC refresh cycle.",
-    why: "I wanted to test whether the market overemphasised Dell’s hardware cyclicality and near-term AI server margins while underrecognising its full-stack enterprise AI capabilities.",
+    intro: "The original 2025 Dell investment thesis, reconstructed using my presentation and three-statement model. The historical reference price of $95.56 and blended price target of $115.56 imply 20.9% upside.",
+    why: "The 2025 variant view was that markets underappreciated Dell's integrated AI infrastructure economics, supply-chain preparation and the enterprise PC refresh.",
     built: [
-      "Three investment pillars: integrated AI infrastructure, structural direct-to-customer advantages and the commercial PC replacement cycle.",
-      "A bottom-up ISG model using phased AI backlog conversion and incremental demand, alongside a region-by-region top-down CSG forecast.",
-      "A DCF and segmented peer-valuation framework using approximately 11% WACC, 2% terminal growth and EV/EBITDA cross-checks.",
+      "An original three-thesis equity pitch: the direct model, the tariff test and refreshing revenue recovery.",
+      "A segmented ISG/CSG forecast with regional PC unit drivers, contract-linked infrastructure revenue assumptions and a three-statement model.",
+      "A blended target using Gordon-growth DCF, exit-multiple DCF and median peer relative valuation at equal weights."
     ],
-    learn: "AI adoption alone is not a valuation argument. The investment case must connect backlog conversion, margin resilience and cash generation to earnings power—and articulate exactly what would disprove it.",
-    note: "Historical 2025 student research and valuation assumptions, not a current recommendation. The full model and original pitch deck are not reproduced on this public website.",
-    tags: ["equity research", "AI infrastructure", "valuation"],
-  },
+    learn: "An investment story becomes testable only when its business drivers, cash flows, valuation assumptions and disconfirming evidence connect coherently.",
+    note: "Historical student research as of 4 March 2025, not a current recommendation. The original full deck and workbook are not made public.",
+    tags: ["Dell", "AI infrastructure", "3-statement modelling", "valuation"]
+  }
 ];
 
 export const getCreativeProject = (slug: string) => creativeProjects.find((item) => item.slug === slug);

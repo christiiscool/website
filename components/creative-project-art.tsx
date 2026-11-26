@@ -33,7 +33,7 @@ export function CreativeProjectArt({ visual, compact = false }: { visual: Projec
         <div className="cp-os-stamp">FILED<br/>WITH CARE</div>
       </>}
       {visual === "dell" && <>
-        <div className="cp-dell-sheet"><small>STUDENT RESEARCH / 2025</small><strong>the AI<br/>infrastructure<br/><em>question.</em></strong><span>company notes ◇</span></div>
+        <div className="cp-dell-sheet"><small>ORIGINAL RESEARCH / 2025</small><strong>the real<br/><em>DELL.</em></strong><span>three theses · historical BUY · +20.9% ✳</span></div>
         <div className="cp-dell-clip">✣</div>
       </>}
     </div>
