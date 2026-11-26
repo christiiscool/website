@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { CreativeShell } from "@/components/creative-shell";
 
-export const metadata: Metadata = { title: "Say Hi | Christi's Corner", description: "Get in touch with Christi about projects, research, climbing, travel or something interesting." };
+export const metadata: Metadata = { title: "Say Hi | Christi", description: "Get in touch with Christi about projects, research, climbing, travel or something interesting." };
 
 export default function ContactPage(){return <CreativeShell current="/contact">
   <div className="cp-contact-hero"><p className="cp-kicker">GOT SOMETHING ON YOUR MIND? ✿</p><h1>come say<br/><em>hello!</em></h1><p>i'd love to hear about a project, an interesting investing question, a climbing recommendation — or just something you think i'd find cool.</p>

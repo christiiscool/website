@@ -1,4 +1,4 @@
-# Christi's Corner — site-wide redesign
+# Christi — site-wide redesign
 
 The uploaded collage image remains the desktop homepage hero. This update rebuilds the pages beneath it.
 

@@ -38,7 +38,7 @@ const selectedWork = [
 
 export default function Home() {
   return (
-    <div className="artboard-home" id="top">
+    <main className="artboard-home" id="top">
       <a className="artboard-skip" href="#about">
         Skip to content
       </a>
@@ -90,7 +90,7 @@ export default function Home() {
 
         <div className="artboard-mobile">
           <header className="artboard-mobile-header">
-            <a href="#top" className="artboard-mobile-brand">christi ✳</a>
+            <a href="#top" className="artboard-mobile-brand">Christi ✳</a>
             <details className="artboard-mobile-menu">
               <summary>menu <span aria-hidden="true">＋</span></summary>
               <nav aria-label="Mobile navigation">
@@ -193,7 +193,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer className="artboard-footer">christi's corner ✳ <span>made with little moments ♡</span></footer>
-    </div>
+      <footer className="artboard-footer">Christi ✳ <span>made with little moments ♡</span></footer>
+    </main>
   );
 }

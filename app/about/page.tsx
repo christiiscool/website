@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CreativeShell } from "@/components/creative-shell";
 
-export const metadata: Metadata = { title: "About | Christi's Corner", description: "Meet Christi: curious about markets and behaviour, usually climbing or dreaming up another project." };
+export const metadata: Metadata = { title: "About | Christi", description: "Meet Christi: curious about markets and behaviour, usually climbing or dreaming up another project." };
 
 export default function AboutPage() {
   return <CreativeShell current="/about">

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CreativeShell } from "@/components/creative-shell";
 
-export const metadata: Metadata = {title: "Journal | Christi's Corner", description: "Little notes and open questions about markets, behaviour, building things and life beyond a screen."};
+export const metadata: Metadata = {title: "Journal | Christi", description: "Little notes and open questions about markets, behaviour, building things and life beyond a screen."};
 
 const thinkingAbout = [
  {number:"01",tag:"markets / attention",title:"When does a story become a signal?",text:"Market narratives can travel faster than the fundamentals underneath them. I'm interested in when attention reveals information and when it simply amplifies a crowded belief. The hard part is separating that story from a prediction that survives costs and out-of-sample testing.",related:"/work/behavioural-alpha",relatedLabel:"the related research"},

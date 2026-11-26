@@ -12,7 +12,7 @@ type Props = { params: Promise<{ slug: string }> };
 export function generateStaticParams() { return creativeProjects.map(({slug})=>({slug})); }
 export async function generateMetadata({params}: Props): Promise<Metadata> {
   const project = getCreativeProject((await params).slug);
-  return { title: `${project?.title ?? "Project"} | Christi's Corner`, description: project?.short };
+  return { title: `${project?.title ?? "Project"} | Christi`, description: project?.short };
 }
 
 export default async function WorkDetailPage({params}: Props) {

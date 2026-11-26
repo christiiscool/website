@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CreativeShell } from "@/components/creative-shell";
 import { CreativeProjectShowcase } from "@/components/creative-project-showcase";
 
-export const metadata: Metadata = { title: "Things I've Made | Christi's Corner", description: "A playful collection of research, code, travel projects, trading experiments and things I've made." };
+export const metadata: Metadata = { title: "Things I've Made | Christi", description: "A playful collection of research, code, travel projects, trading experiments and things I've made." };
 
 export default function WorkPage() {
   return <CreativeShell current="/work">
