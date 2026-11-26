@@ -1,26 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import { CreativeShell } from "@/components/creative-shell";
-import { CreativeProjectShowcase } from "@/components/creative-project-showcase";
+import { ProjectExhibit } from "@/components/archi-objects";
+import {creativeProjects} from "@/data/creative-projects";
 
-export const metadata: Metadata = { title: "Things I've Made | Christi", description: "A playful collection of research, code, travel projects, trading experiments and things I've made." };
-
-export default function WorkPage() {
-  return <CreativeShell current="/work">
-    <div className="cp-page-hero cp-work-hero">
-      <div className="cp-hero-copy"><p className="cp-kicker">WELCOME TO MY LITTLE WORKBENCH ✳</p>
-        <h1>things i've<br/><em>made.</em></h1>
-        <p className="cp-lead">a collection of rabbit holes, code experiments, investment questions &amp; ideas that actually made it out of my notebook.</p>
-      </div>
-      <div className="cp-work-decor" aria-hidden="true">
-        <span className="cp-work-decor-star">✳</span>
-        <div className="cp-work-decor-note">ideas are <em>meant</em><br/>to be tried <span>↗</span></div>
-        <div className="cp-work-decor-ticket"><small>ARCHIVE NO. 01—06</small><strong>made<br/>with curiosity</strong><span>✿ ✿ ✿</span></div>
-      </div>
-    </div>
-    <section className="cp-listing" aria-labelledby="selected-projects-title">
-      <div className="cp-section-heading"><span>01 / THE ARCHIVE</span><h2 id="selected-projects-title">pick a little rabbit hole <span aria-hidden="true">↘</span></h2></div>
-      <CreativeProjectShowcase />
-    </section>
-    <section className="cp-end-note"><span aria-hidden="true">✳</span><p>the best projects begin with a question i can't stop thinking about.</p><a href="/contact">have one for me? say hi ↗</a></section>
-  </CreativeShell>;
-}
+export const metadata:Metadata={title:"Work | Christi",description:"Christi's collection of research, code, experiments and the occasional rabbit hole."};
+export default function WorkPage(){return <CreativeShell current="/work">
+ <section className="aw-page-title aw-work-page-title aw-content-wide"><span className="aw-page-label">01 / projects &amp; little obsessions</span><h1>the work<br/><em>archive.</em></h1><p>Some things I've built, investigated, or just really wanted to understand. Click anything that catches your eye.</p><div className="aw-work-title-objects" aria-hidden="true"><div className="aw-work-title-paper"><span>RESEARCH / LOG 001</span><strong>collecting<br/>little ideas.</strong><div className="aw-work-title-lines"><i/><i/><i/></div></div><div className="aw-work-title-photo"><img src="/art/archi/birthday.webp" alt=""/><span>work hard / play harder</span></div><img src="/art/archi/star-charm.svg" alt=""/></div></section>
+ <section className="aw-projects-all aw-content-wide"><div className="aw-section-rule"><span>THE COLLECTION</span><span>06 PROJECTS / OPEN ANYTHING</span></div><div className="aw-project-grid aw-project-grid-all">{creativeProjects.map((p,i)=><ProjectExhibit key={p.slug} project={p} index={i}/>)}</div></section>
+ <section className="aw-page-bottom aw-content-wide"><span>STILL CURIOUS?</span><p>The next thing is probably already taking shape in a notebook somewhere.</p><a href="mailto:christichia@gmail.com">write me a note &#8599;</a></section>
+ </CreativeShell>}

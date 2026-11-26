@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 310">
+<defs><radialGradient id="red" cx=".27" cy=".20" r=".95"><stop stop-color="#ffdedb"/><stop offset=".22" stop-color="#ef687e"/><stop offset=".70" stop-color="#bd173d"/><stop offset="1" stop-color="#6d1532"/></radialGradient><linearGradient id="stem"><stop stop-color="#b0d38c"/><stop offset="1" stop-color="#4e7458"/></linearGradient></defs>
+<path d="M145 32 Q136 111 88 173 M145 32 Q180 96 206 172" stroke="url(#stem)" stroke-width="13" fill="none" stroke-linecap="round"/>
+<path d="M145 40 Q97 9 71 62 Q126 67 145 40 M146 40 Q203 5 234 47 Q182 71 146 40" fill="#85a969" stroke="#527f55" stroke-width="4"/>
+<ellipse cx="85" cy="205" rx="70" ry="74" fill="url(#red)" stroke="#9d2c46" stroke-width="3"/>
+<ellipse cx="212" cy="211" rx="69" ry="75" fill="url(#red)" stroke="#9d2c46" stroke-width="3"/>
+<ellipse cx="59" cy="178" rx="17" ry="26" fill="#fff" opacity=".48" transform="rotate(25 59 178)"/><ellipse cx="186" cy="181" rx="17" ry="26" fill="#fff" opacity=".4" transform="rotate(22 186 181)"/>
+<circle cx="147" cy="25" r="12" fill="none" stroke="#bec5ce" stroke-width="9"/>
+</svg>

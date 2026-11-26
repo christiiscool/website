@@ -1,11 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
-import { CreativeShell } from "@/components/creative-shell";
+import {CreativeShell} from "@/components/creative-shell";
 
-export const metadata: Metadata = { title: "Say Hi | Christi", description: "Get in touch with Christi about projects, research, climbing, travel or something interesting." };
-
+export const metadata:Metadata={title:"Say hi | Christi",description:"Get in touch with Christi about research, code, travel, climbing and unexpected ideas."};
 export default function ContactPage(){return <CreativeShell current="/contact">
-  <div className="cp-contact-hero"><p className="cp-kicker">GOT SOMETHING ON YOUR MIND? ✿</p><h1>come say<br/><em>hello!</em></h1><p>i'd love to hear about a project, an interesting investing question, a climbing recommendation — or just something you think i'd find cool.</p>
-    <div className="cp-contact-links"><a className="cp-contact-primary" href="mailto:christichia@gmail.com?subject=Hello%20from%20your%20website">send me an email ↗</a><a href="https://www.linkedin.com/in/christichia" target="_blank" rel="noopener noreferrer">find me on linkedin ↗</a><a href="https://github.com/christiiscool" target="_blank" rel="noopener noreferrer">peek at my github ↗</a></div>
-    <div className="cp-contact-envelope" aria-hidden="true"><div className="cp-envelope-stamp">✿</div><div className="cp-envelope-address">TO: SOMEONE CURIOUS<br/>FROM: CHRISTI ♡</div><b>WRITE SOON!</b></div>
-  </div>
-</CreativeShell>}
+ <section className="aw-contact-stage aw-content-wide"><span className="aw-page-label">04 / a little hello</span><h1>you've got<br/><em>mail.</em></h1><p>Have a question, project, climbing recommendation, or something wonderfully random to share? I'd love to hear it.</p>
+ <div className="aw-mail-envelope" aria-hidden="true"><div className="aw-envelope-paper"><span>TO: the curious internet</span><strong>from Christi, with love</strong><i>2026 / personal mail</i></div><div className="aw-envelope-back"/><div className="aw-envelope-flap"/><div className="aw-mail-stamp">C<br/>&#10043;</div></div>
+ <div className="aw-contact-actions"><a className="aw-contact-button" href="mailto:christichia@gmail.com?subject=Hello%20from%20your%20website">send me an email &#8599;</a><a href="https://www.linkedin.com/in/christichia" target="_blank" rel="noopener noreferrer">linkedin &#8599;</a><a href="https://github.com/christiiscool" target="_blank" rel="noopener noreferrer">github &#8599;</a></div>
+ <img className="aw-contact-flower" src="/art/archi/flower-keychain.svg" alt=""/>
+ </section>
+ </CreativeShell>}
