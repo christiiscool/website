@@ -1,199 +1,109 @@
-/* eslint-disable @next/next/no-img-element */
-import "../styles/artboard-home.css";
+import Link from "next/link";
+import { ChristiScrapbook } from "@/components/christi-scrapbook";
+import "@/styles/christi-home.css";
 
-const navigation = [
-  { label: "home", href: "#top", left: 64.4, width: 5.5 },
-  { label: "about", href: "/about", left: 70.8, width: 5.6 },
-  { label: "my work", href: "/work", left: 77.0, width: 6.9 },
-  { label: "journal", href: "/journal", left: 84.5, width: 7.3 },
-  { label: "say hi", href: "/contact", left: 92.2, width: 6.0 },
-];
-
-const selectedWork = [
+const projects = [
   {
-    number: "01",
-    type: "quantitative research / 2026",
-    title: "Dynamic Factor Timing",
-    description:
-      "A walk-forward study of machine-learning factor allocation and an options-based risk overlay.",
     href: "/work/dynamic-factor-timing",
+    number: "01",
+    kind: "QUANT RESEARCH / 2026",
+    title: "Dynamic Factor Timing",
+    description: "Do factors behave differently when market regimes change? A walk-forward research study with an options-risk overlay.",
+    className: "chi-project--factor",
+    cover: "factors & feelings",
   },
   {
+    href: "/work/dell-equity-thesis",
     number: "02",
-    type: "behavioural finance / 2026",
-    title: "Where Is Alpha Truly Generated?",
-    description:
-      "Exploring investor behaviour, information frictions and the search for systematic alpha.",
-    href: "/work/behavioural-alpha",
+    kind: "EQUITY RESEARCH / 2025",
+    title: "The Real Dell",
+    description: "Three original investment theses, a financial model and a valuation case—revisited as a historical research note.",
+    className: "chi-project--dell",
+    cover: "DELL.",
   },
   {
-    number: "03",
-    type: "other things i've built",
-    title: "Pixel Passport & Other Experiments",
-    description:
-      "A playful travel planner, trading experiments and things I’ve been making.",
     href: "/work/pixel-passport",
+    number: "03",
+    kind: "INTERACTIVE DESIGN / 2026",
+    title: "Pixel Passport",
+    description: "Making travel planning feel a little more like collecting postcards and a little less like organising a spreadsheet.",
+    className: "chi-project--passport",
+    cover: "pixel passport",
+  },
+  {
+    href: "/work/behavioural-alpha",
+    number: "04",
+    kind: "BEHAVIOURAL FINANCE / 2026",
+    title: "Where Is Alpha Generated?",
+    description: "Notes on investor attention, narratives, and how to distinguish a compelling story from a testable signal.",
+    className: "chi-project--alpha",
+    cover: "α ?",
   },
 ];
 
 export default function Home() {
   return (
-    <main className="artboard-home" id="top">
-      <a className="artboard-skip" href="#about">
-        Skip to content
-      </a>
-      <section className="artboard-hero" aria-label="Christi's personal corner of the internet">
-        <div className="artboard-desktop">
-          <img
-            className="artboard-full-hero"
-            src="/art/hero-collage.webp"
-            width={1536}
-            height={1024}
-            alt=""
-            loading="eager"
-            fetchPriority="high"
-          />
-          <div className="artboard-sr-only">
-            <h1>Christi</h1>
-            <p>
-              Markets, code, climbing and collecting interesting experiences. A little
-              place for my research, projects and the rest of life.
-            </p>
-          </div>
-          <nav aria-label="Homepage navigation">
-            {navigation.map((item) => (
-              <a
-                key={item.label}
-                className="artboard-spot"
-                href={item.href}
-                style={{ left: `${item.left}%`, top: "2.7%", width: `${item.width}%`, height: "5.1%" }}
-              >
-                <span className="artboard-sr-only">{item.label}</span>
-              </a>
-            ))}
-          </nav>
-          <a
-            className="artboard-spot"
-            href="/work"
-            style={{ left: "5.3%", top: "55.8%", width: "17.6%", height: "8.0%" }}
-          >
-            <span className="artboard-sr-only">Explore my work</span>
-          </a>
-          <a
-            className="artboard-spot"
-            href="/about"
-            style={{ left: "7.0%", top: "65.0%", width: "14.8%", height: "5.3%" }}
-          >
-            <span className="artboard-sr-only">Get to know me</span>
-          </a>
-        </div>
+    <main className="chi-home" id="top">
+      <a href="#chi-content" className="chi-skip">Skip to content</a>
+      <ChristiScrapbook />
 
-        <div className="artboard-mobile">
-          <header className="artboard-mobile-header">
-            <a href="#top" className="artboard-mobile-brand">Christi ✳</a>
-            <details className="artboard-mobile-menu">
-              <summary>menu <span aria-hidden="true">＋</span></summary>
-              <nav aria-label="Mobile navigation">
-                <a href="#top">home</a>
-                <a href="/about">about</a>
-                <a href="/work">my work</a>
-                <a href="/journal">journal</a>
-                <a href="/contact">say hi</a>
-              </nav>
-            </details>
-          </header>
-          <div className="artboard-mobile-intro">
-            <div className="artboard-mobile-star" aria-hidden="true">☆</div>
-            <h1>Christi<span className="artboard-dot">.</span></h1>
-            <p className="artboard-mobile-tagline">
-              markets, code, climbing &amp;<br /> collecting interesting experiences ♡
-            </p>
-            <div className="artboard-mobile-actions">
-              <a className="artboard-mobile-oval" href="/work">explore my work <span aria-hidden="true">→</span></a>
-              <a className="artboard-mobile-plain" href="/about">get to know me <span aria-hidden="true">→</span></a>
-            </div>
-          </div>
-          <div className="artboard-mobile-collage">
-            <img
-              src="/art/hero-mobile-collage.webp"
-              width={946}
-              height={937}
-              loading="eager"
-              alt="A nostalgic collage of Christi's birthday in a retro camcorder, a black-and-white photo filmstrip, a Paris postcard, pink stickers and keepsakes."
-            />
-          </div>
+      <div className="chi-ticker" aria-hidden="true"><span>✳ &nbsp; interesting questions &nbsp; ✿ &nbsp; postcards from everywhere &nbsp; ♡ &nbsp; little experiments &nbsp; ✳</span></div>
+
+      <section className="chi-story" id="chi-content" aria-labelledby="chi-story-heading">
+        <div className="chi-section-id">01 / A SMALL INTRODUCTION</div>
+        <div className="chi-story-copy">
+          <p className="chi-eyebrow">hello, hello <span aria-hidden="true">♡</span></p>
+          <h2 id="chi-story-heading">a little bit of <em>everything.</em></h2>
+          <p>I&apos;m a Singapore-based student interested in behavioural finance, markets and the ideas that make us rethink what we know. I like taking a question apart, testing it, and sometimes building something small along the way.</p>
+          <p>Outside the spreadsheets: climbing, travelling, collecting photos, and planning whichever adventure comes next.</p>
+          <Link href="/about" className="chi-ink-link">more of my story <span aria-hidden="true">↗</span></Link>
         </div>
+        <div className="chi-story-doodle" aria-hidden="true"><span>♡</span><small>always<br />curious!</small></div>
       </section>
 
-      <div className="artboard-ticker" aria-hidden="true">✳ &nbsp; photos, thoughts &amp; little things &nbsp; ♡ &nbsp; ✳</div>
-
-      <section id="about" className="artboard-section artboard-about">
-        <div className="artboard-index">01 / WHO'S THIS?</div>
-        <div className="artboard-section-main">
-          <p className="artboard-overline">a little introduction ♡</p>
-          <h2>hi, i'm christi.<br /><em>nice to meet you!</em></h2>
-          <p>
-            I&apos;m a Singapore-based student who likes asking questions about markets,
-            people and the way the world works. I love turning interesting ideas into
-            research and small things I can actually build.
-          </p>
-          <p>
-            When I&apos;m away from my laptop, I&apos;m probably climbing, travelling,
-            taking photos or planning my next little adventure.
-          </p>
-          <a href="/about" className="artboard-text-link">a bit more about me <span aria-hidden="true">↗</span></a>
+      <section id="selected-work" className="chi-selected-work" aria-labelledby="chi-selected-heading">
+        <div className="chi-section-id">02 / MY LITTLE ARCHIVE</div>
+        <div className="chi-work-heading">
+          <div><p className="chi-eyebrow">ideas, but make them real ✳</p><h2 id="chi-selected-heading">things i&apos;ve <em>made.</em></h2></div>
+          <p>some research, code and curious rabbit holes that turned into something tangible.</p>
         </div>
+        <div className="chi-project-board">
+          {projects.map((project) => (
+            <Link href={project.href} key={project.href} className={`chi-project ${project.className}`}>
+              <div className="chi-project-cover">
+                <span className="chi-cover-stamp">{project.kind}</span>
+                <strong>{project.cover}</strong>
+                {project.number === "01" && <svg viewBox="0 0 440 150" aria-hidden="true"><path d="M0 108 L35 99 L70 113 L105 69 L140 78 L175 45 L210 66 L245 27 L280 45 L315 18 L350 55 L390 33 L440 12" fill="none" stroke="#2a4dcc" strokeWidth="7" strokeLinecap="round" /><path d="M0 135 L50 124 L100 127 L150 103 L210 117 L255 82 L300 95 L365 61 L440 75" fill="none" stroke="#e0a6a6" strokeWidth="5" /></svg>}
+                {project.number === "02" && <div className="chi-cover-dell-foot">THE DIRECT MODEL &nbsp; / &nbsp; THE TARIFF TEST &nbsp; / &nbsp; THE REFRESH</div>}
+                {project.number === "03" && <div className="chi-cover-passport-stamp" aria-hidden="true">✳<span>ST. GALLEN<br />01 / 27</span></div>}
+                {project.number === "04" && <div className="chi-cover-alpha-scribble">attention ≠ information</div>}
+                <span className="chi-cover-serial">CHRISTI / {project.number}</span>
+              </div>
+              <div className="chi-project-meta"><span>{project.number} / {project.kind}</span><span>↗</span></div>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+            </Link>
+          ))}
+        </div>
+        <Link href="/work" className="chi-all-work">open the full archive <span aria-hidden="true">↗</span></Link>
       </section>
 
-      <section id="work" className="artboard-section artboard-work">
-        <div className="artboard-index">02 / THE WORK FILES</div>
-        <div className="artboard-section-main">
-          <p className="artboard-overline">things i've made ✳</p>
-          <h2>curiosity, but<br /><em>make it a project.</em></h2>
-          <p>Some research, code and ideas that made it out of my head and onto a page.</p>
-          <div className="artboard-work-list">
-            {selectedWork.map((item) => (
-              <a href={item.href} className="artboard-work-item" key={item.number}>
-                <span className="artboard-work-number">{item.number}</span>
-                <span className="artboard-work-description">
-                  <small>{item.type}</small>
-                  <strong>{item.title}</strong>
-                  <span>{item.description}</span>
-                </span>
-                <span className="artboard-work-arrow" aria-hidden="true">↗</span>
-              </a>
-            ))}
-          </div>
+      <section className="chi-final-note" aria-labelledby="chi-note-heading">
+        <div className="chi-final-note-paper">
+          <span>03 / LITTLE THOUGHTS</span>
+          <h2 id="chi-note-heading">a page for my <em>brain.</em></h2>
+          <p>questions i&apos;m thinking about, ideas i&apos;m testing, and the occasional note from somewhere beyond my desk.</p>
+          <Link href="/journal">browse the journal ↗</Link>
+          <span className="chi-final-note-sticker" aria-hidden="true">✳</span>
         </div>
-      </section>
-
-      <section id="journal" className="artboard-section artboard-journal">
-        <div className="artboard-index">03 / LITTLE NOTES</div>
-        <div className="artboard-section-main">
-          <p className="artboard-overline">pages from my brain ✿</p>
-          <h2>the little<br /><em>thought archive.</em></h2>
-          <p>
-            A place for everything worth remembering: questions I&apos;m exploring,
-            market notes and occasional stories beyond my desk.
-          </p>
-          <a href="/journal" className="artboard-text-link">browse my notes <span aria-hidden="true">↗</span></a>
-        </div>
-      </section>
-
-      <section id="contact" className="artboard-section artboard-contact">
-        <div className="artboard-index">04 / SAY HELLO</div>
-        <div className="artboard-section-main">
-          <p className="artboard-overline">you made it to the end! ♡</p>
+        <div className="chi-say-hi">
+          <span>04 / LETTERS ARE WELCOME</span>
           <h2>come say <em>hi!</em></h2>
-          <p>About markets, projects, travel plans, climbing—or anything interesting.</p>
-          <a className="artboard-contact-button" href="mailto:christichia@gmail.com">send me a little note <span aria-hidden="true">↗</span></a>
-          <div className="artboard-socials">
-            <a href="https://github.com/christiiscool" target="_blank" rel="noreferrer">github ↗</a>
-            <a href="https://www.linkedin.com/in/christichia" target="_blank" rel="noreferrer">linkedin ↗</a>
-          </div>
+          <p>About markets, projects, climbing, travel—or something entirely unexpected.</p>
+          <Link href="/contact">leave me a little note ↗</Link>
         </div>
       </section>
-      <footer className="artboard-footer">Christi ✳ <span>made with little moments ♡</span></footer>
+      <footer className="chi-footer"><Link href="/">Christi<span>✳</span></Link><span>made with curiosity &amp; a little bit of chaos ♡</span><div><a href="https://github.com/christiiscool" target="_blank" rel="noopener noreferrer">github ↗</a><a href="https://www.linkedin.com/in/christichia" target="_blank" rel="noopener noreferrer">linkedin ↗</a></div></footer>
     </main>
   );
 }
