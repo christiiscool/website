@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght,ital@6..96,400,0;6..96,500,0;6..96,600,0;6..96,400,1&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* An editorial continuation of the homepage. Preserves existing research reports and charts. */
+.creative-page {
+  --cp-blue: #2140cd;
+  --cp-ink: #273041;
+  --cp-muted: #566674;
+  --cp-pink: #e5dfe6;
+  --cp-blush: #f3f2f3;
+  --cp-paper: #f6f8f7;
+  --cp-line: #dce4e8;
+  --cp-white: #fffefa;
+  background: #f6f8f7;
+  color: var(--cp-ink);
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+body:has(.creative-page) { background: #f6f8f7; }
+.creative-page .cp-header { height: 78px; border-bottom: 1px solid #dfe9ed; max-width: none; background: #f6f9f9eb; }
+.creative-page .cp-wordmark { font: 500 italic 37px/1 'Bodoni Moda', Didot, Georgia,serif; letter-spacing: -.08em; transform: none; }
+.creative-page .cp-wordmark span { font-size: 16px; color: #bc7789; }
+.creative-page .cp-desktop-nav a { font: 600 12px 'DM Sans',Arial,sans-serif; color: #3455b5!important; }
+.creative-page .cp-desktop-nav a:hover::after,
+.creative-page .cp-desktop-nav a[aria-current='page']::after { background: #c28791; }
+.creative-page .cp-page-hero { min-height: 420px; padding-top: 92px; padding-bottom: 65px; grid-template-columns: 1.3fr .7fr; }
+.creative-page .cp-page-hero h1,
+.creative-page .cp-about-title h1,
+.creative-page .cp-journal-hero h1,
+.creative-page .cp-contact-hero h1 { font-family: 'Bodoni Moda',Didot,Georgia,serif; font-weight: 400; font-style: normal; letter-spacing: -.085em; color: #2140cd; }
+.creative-page .cp-page-hero h1 { font-size: clamp(90px,10vw,145px); }
+.creative-page .cp-kicker { font: 700 10px 'DM Sans',Arial,sans-serif!important; letter-spacing: .18em; color: #758b9a!important; }
+.creative-page .cp-lead { font-family: 'DM Sans',Arial,sans-serif; }
+.creative-page .cp-work-decor { min-height: 300px; }
+.creative-page .cp-work-decor-note { background: #e6eef5; border-color: #bfcdda; color: #2540a0; box-shadow: 8px 12px 0 #cddfe5; font-family: 'Bodoni Moda',Georgia,serif; }
+.creative-page .cp-work-decor-note em { color: #bd7d8d; }
+.creative-page .cp-work-decor-star { color: #c69d53; filter: drop-shadow(4px 7px 4px #a5977961); }
+.creative-page .cp-work-decor-ticket { background: #fffefa; border-color: #b6c6dc; box-shadow: 7px 11px 0 #d1dfe8; }
+.creative-page .cp-work-decor-ticket strong { font-family: 'Bodoni Moda',Georgia,serif; }
+.creative-page .cp-listing { max-width: 1430px; }
+.creative-page .cp-section-heading h2 { font-family: 'Bodoni Moda',Georgia,serif; font-style: normal; font-weight: 400; color: #2140cd; }
+.creative-page .cp-section-heading>span { color: #798d99; }
+.creative-page .cp-filters { gap: 19px; margin: 28px 0 65px; }
+.creative-page .cp-filter { background: transparent; border: 0; border-bottom: 1px solid transparent; border-radius: 0; padding: 10px 1px; color: #697989; font: 700 12px 'DM Sans',Arial,sans-serif; }
+.creative-page .cp-filter:hover { background: transparent; border-bottom-color: #9aaed5; color: #2443c6; }
+.creative-page .cp-filter.is-selected { background: transparent; color: #2140cd; border-bottom: 2px solid #2140cd; }
+.creative-page .cp-project-grid { display: grid; grid-template-columns: repeat(12, minmax(0,1fr)); gap: 75px 34px; align-items: start; }
+.creative-page .cp-project-card { background: transparent; border: 0; padding: 0; box-shadow: none; transform: none; min-width: 0; }
+.creative-page .cp-project-card:nth-child(odd), .creative-page .cp-project-card:nth-child(even) { transform: none; }
+.creative-page .cp-project-card:nth-child(6n+1) { grid-column: span 7; }
+.creative-page .cp-project-card:nth-child(6n+2) { grid-column: span 5; margin-top: 55px; }
+.creative-page .cp-project-card:nth-child(6n+3) { grid-column: span 5; margin-top: 15px; }
+.creative-page .cp-project-card:nth-child(6n+4) { grid-column: span 7; margin-top: 58px; }
+.creative-page .cp-project-card:nth-child(6n+5) { grid-column: span 6; margin-top: 10px; }
+.creative-page .cp-project-card:nth-child(6n+6) { grid-column: span 6; margin-top: 60px; }
+.creative-page .cp-project-image { height: 355px; overflow: hidden; border: 9px solid #fffefa; box-shadow: 8px 10px 0 #d1dfe5, 12px 17px 20px #38556c24; transform: rotate(-2deg); transition: transform .28s,box-shadow .28s; }
+.creative-page .cp-project-card:nth-child(even) .cp-project-image { transform: rotate(2.2deg); }
+.creative-page .cp-project-card:hover .cp-project-image { transform: rotate(0) translateY(-8px); box-shadow: 10px 17px 0 #d1dfe5, 14px 24px 27px #38556c33; }
+.creative-page .cp-project-card:nth-child(6n+1) .cp-project-image,
+.creative-page .cp-project-card:nth-child(6n+4) .cp-project-image { height: 415px; }
+.creative-page .cp-project-meta { margin: 30px 2px 13px; color: #738791; font: 700 10px 'DM Sans',Arial,sans-serif; }
+.creative-page .cp-project-card h2 { margin: 0 2px 12px; font: 400 clamp(33px,3.5vw,52px)/1.1 'Bodoni Moda',Georgia,serif; letter-spacing: -.055em; color: #2140cd; }
+.creative-page .cp-project-card>p { margin: 0 2px 17px; font: 400 15px/1.65 'DM Sans',Arial,sans-serif; color: #64727a; }
+.creative-page .cp-project-tags { margin: 0 2px; }
+.creative-page .cp-project-tags span { border-color: #bdcdd6; background: #fffefa; color: #637987; }
+.creative-page .cp-showcase-footnote { font-family: 'Bodoni Moda',Georgia,serif; color: #798f99; }
+.creative-page .cp-footer { border-top-color: #dce4e8; }
+.creative-page .cp-footer>a:first-child { font-family: 'Bodoni Moda',Georgia,serif; }
+.creative-page .cp-end-note { border-color: #dce4e8; }
+.creative-page .cp-end-note p { font-family: 'Bodoni Moda',Georgia,serif; color: #2140cd; }
+.creative-page .cp-about-title h1,
+.creative-page .cp-journal-hero h1,
+.creative-page .cp-contact-hero h1 { font-size: clamp(83px, 10vw,145px); }
+@media (max-width: 950px) {
+  .creative-page .cp-project-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 55px 25px; }
+  .creative-page .cp-project-card:nth-child(n) { grid-column: auto; margin-top: 0; }
+  .creative-page .cp-project-card:nth-child(n) .cp-project-image { height: 320px; }
+}
+@media (max-width: 640px) {
+  .creative-page .cp-page-hero { padding-top: 64px; padding-bottom: 35px; }
+  .creative-page .cp-page-hero h1 { font-size: clamp(65px, 13vw, 90px); }
+  .creative-page .cp-project-grid { display: block; }
+  .creative-page .cp-project-card:nth-child(n) { display: block; margin: 0 0 64px; }
+  .creative-page .cp-project-card:nth-child(n) .cp-project-image { height: 300px; }
+  .creative-page .cp-project-card h2 { font-size: 37px; }
+  .creative-page .cp-filters { margin-bottom: 45px; }
+}
